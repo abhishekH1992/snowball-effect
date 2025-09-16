@@ -1,0 +1,3888 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: advanced-chat
+  name: age receivable v1
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/openai:0.2.3@5a7f82fa86e28332ad51941d0b491c1e8a38ead539656442f7bf4c6129cd15fa
+kind: app
+version: 0.4.0
+workflow:
+  conversation_variables:
+  - description: ''
+    id: 189335c7-0948-4743-a21b-072489615752
+    name: last_company_id
+    selector:
+    - conversation
+    - last_company_id
+    value: ''
+    value_type: string
+  - description: ''
+    id: cddc5001-e986-4917-823a-4f2a67e5c7da
+    name: last_companies
+    selector:
+    - conversation
+    - last_companies
+    value: ''
+    value_type: string
+  - description: ''
+    id: 43e52a88-abf7-4f50-885c-1169556d05e5
+    name: company_match
+    selector:
+    - conversation
+    - company_match
+    value:
+    - 35 Vivian Street Limited
+    - Dataguard Limited
+    - Willis Street Parking Limited
+    - Urban Hub Limited
+    - RCR GREEN MANAGEMENT LIMITED
+    - 16 Park Avenue Limited
+    - 55 The Square Limited
+    - Vivian Street Properties Limited
+    - 318 Lambton Quay Limited
+    - 1125 Arawa Street Limited
+    - 280 Queen Street Limited
+    - 146 Vivian Street Limited
+    - 37 Vivian Street Limited
+    - Chow Group Limited
+    - RCR GREEN DEVELOPMENT LIMITED
+    - Queensland Homes Master Franchise Pty Limited
+    - 1135 Arawa Street Limited
+    - RCR INFRASTRUCTURE LIMITED
+    - Stonewood Homes NZ Master Franchisee Limited
+    - 322 K RD Limited
+    - 13 Gore Street Limited
+    - 89 Courtenay Place Limited
+    - 137 Quay Street Limited
+    - Top of Tory Limited
+    - Courtenay Capital Investments Limited
+    - Shakespeare Project Limited Partnership
+    - Stonewood Key Capital Limited
+    - 280 QS Project Limited
+    - Langs Beach Property Limited
+    - Sloane Development Limited Partnership
+    - Clearwater No. 1 Limited
+    - Stonewood Group Limited
+    - Willis St Project Limited
+    - Key Capital Management Limited
+    - Project Vivian Limited
+    - SZ Project No.1 Limited
+    - Huka No.1 Limited
+    - Castledine Development Ltd Partnership
+    - Stanley Ave Project Limited Partnership
+    - Clearwater Projects Limited
+    - Hart Project Management Limited
+    - Prudencia (Asia-Pacific) Insurance Limited
+    - Stonewood Capital Limited
+    - Stonewood Developments Limited
+    - Castledine Development Management Limited
+    - Hilton Project Management Limited
+    - 308 St Heliers Limited Partnership
+    - Top of Tory Project Limited
+    - Project 1125 Arawa Limited
+    - Hilton Development Limited Partnership
+    - 322KR Project Limited
+    - Stonewood Acquisitions Limited
+    - Stonewood Capital Holdings Limited
+    - Stone Developments Queenstown Limited
+    - Stonewood Group Investments Limited
+    - YKC Limited
+    - 89 CP Hotel Limited
+    - 308 St Heliers Development Limited
+    - Focuscap Management Limited
+    - Hart Road Development Limited Partnership
+    - Huka Development Limited
+    - Lake Road Development Limited
+    - Sloane Project Management Limited
+    - Stonewood Investments Limited
+    - SWI Management No.1 Limited
+    - West Tamaki Development Limited
+    - SZ Acquisitions Limited
+    - West Tamaki Limited Partnership
+    value_type: array[string]
+  - description: ''
+    id: d53d70d6-478a-4b78-9633-53e590e821f4
+    name: company_idx
+    selector:
+    - conversation
+    - company_idx
+    value: '0 | 35 Vivian Street Limited
+
+      1 | Dataguard Limited
+
+      2 | Willis Street Parking Limited
+
+      3 | Urban Hub Limited
+
+      4 | RCR GREEN MANAGEMENT LIMITED
+
+      5 | 16 Park Avenue Limited
+
+      6 | 55 The Square Limited
+
+      7 | Vivian Street Properties Limited
+
+      8 | 318 Lambton Quay Limited
+
+      9 | 1125 Arawa Street Limited
+
+      10 | 280 Queen Street Limited
+
+      11 | 146 Vivian Street Limited
+
+      12 | 37 Vivian Street Limited
+
+      13 | Chow Group Limited
+
+      14 | RCR GREEN DEVELOPMENT LIMITED
+
+      15 | Queensland Homes Master Franchise Pty Limited
+
+      16 | 1135 Arawa Street Limited
+
+      17 | RCR INFRASTRUCTURE LIMITED
+
+      18 | Stonewood Homes NZ Master Franchisee Limited
+
+      19 | 322 K RD Limited
+
+      20 | 13 Gore Street Limited
+
+      21 | 89 Courtenay Place Limited
+
+      22 | 137 Quay Street Limited
+
+      23 | Top of Tory Limited
+
+      24 | Courtenay Capital Investments Limited
+
+      25 | Shakespeare Project Limited Partnership
+
+      26 | Stonewood Key Capital Limited
+
+      27 | 280 QS Project Limited
+
+      28 | Langs Beach Property Limited
+
+      29 | Sloane Development Limited Partnership
+
+      30 | Clearwater No. 1 Limited
+
+      31 | Stonewood Group Limited
+
+      32 | Willis St Project Limited
+
+      33 | Key Capital Management Limited
+
+      34 | Project Vivian Limited
+
+      35 | SZ Project No.1 Limited
+
+      36 | Huka No.1 Limited
+
+      37 | Castledine Development Ltd Partnership
+
+      38 | Stanley Ave Project Limited Partnership
+
+      39 | Clearwater Projects Limited
+
+      40 | Hart Project Management Limited
+
+      41 | Prudencia (Asia-Pacific) Insurance Limited
+
+      42 | Stonewood Capital Limited
+
+      43 | Stonewood Developments Limited
+
+      44 | Castledine Development Management Limited
+
+      45 | Hilton Project Management Limited
+
+      46 | 308 St Heliers Limited Partnership
+
+      47 | Top of Tory Project Limited
+
+      48 | Project 1125 Arawa Limited
+
+      49 | Hilton Development Limited Partnership
+
+      50 | 322KR Project Limited
+
+      51 | Stonewood Acquisitions Limited
+
+      52 | Stonewood Capital Holdings Limited
+
+      53 | Stone Developments Queenstown Limited
+
+      54 | Stonewood Group Investments Limited
+
+      55 | YKC Limited
+
+      56 | 89 CP Hotel Limited
+
+      57 | 308 St Heliers Development Limited
+
+      58 | Focuscap Management Limited
+
+      59 | Hart Road Development Limited Partnership
+
+      60 | Huka Development Limited
+
+      61 | Lake Road Development Limited
+
+      62 | Sloane Project Management Limited
+
+      63 | Stonewood Investments Limited
+
+      64 | SWI Management No.1 Limited
+
+      65 | West Tamaki Development Limited
+
+      66 | SZ Acquisitions Limited
+
+      67 | West Tamaki Limited Partnership'
+    value_type: string
+  - description: ''
+    id: bd77704f-85e2-4d88-a927-65811dc7e906
+    name: connect_id_arr
+    selector:
+    - conversation
+    - connect_id_arr
+    value:
+    - c373a3ae-8079-4fda-98ab-63bb7099e240
+    - 50ebea1e-2e8f-45f5-a05f-409e3c619e13
+    - 1a05379f-ca88-4ecf-8ef7-9ec1d60418be
+    - 55e9729e-5077-465b-8de1-0a8dfe8f8587
+    - 1453f900-a883-4129-aaea-541747652bc4
+    - 17a191bc-fccb-4adf-b01e-3462c3837d4b
+    - 544b7a44-9cc9-45d8-b1a3-23b83f9d9299
+    - 88030bca-f4ba-43d1-9a69-d44327f8dea4
+    - 9f848f31-4057-45ab-9bba-16807f1f6baf
+    - e94f1fcd-c8ea-4623-9a81-f02cee4a02c8
+    - aaaad82f-567b-4776-8f4c-3ba3b63a9235
+    - 2814f115-e09e-4e15-b29a-36b2ffcff7c6
+    - 6d2268ec-34f7-4100-8542-e4551ae46524
+    - f8629e43-7c9d-4dca-9027-02121440961a
+    - 811620e0-1c45-472d-b833-c876308fe7de
+    - 8e1a8557-4946-4e95-a683-0f58dd150767
+    - 106b0e86-647d-4e4b-9ddd-cee291893f63
+    - 6bc90f2d-a0c8-4cea-ad00-d72fac1b50a0
+    - abce947c-0117-487e-8b52-31ea62872836
+    - 3217affa-808c-469f-a7c2-4111462027d3
+    - 8bfad4f7-421b-4243-81c6-db9ab81dd532
+    - 17b476c6-7dca-442c-841a-174721810585
+    - 09040b04-0c48-45d9-804a-70da43f5e154
+    - caba4949-c975-4019-8693-616c156a48d7
+    - 4d36136b-b1cd-4eac-ae14-f9d916405c0a
+    - f366d109-c31f-4631-a928-123bf4b1be15
+    - 1df4fb08-58b5-4b29-a4b3-339c59ef173b
+    - 7956ec0a-1761-44d5-8cbd-812a4e073377
+    - 5b4ecfbc-08f7-4480-88a6-4c133d4872a2
+    - 9f9d7f5e-e04e-451f-8996-1a9e2d2a5abb
+    - 6344245a-9074-47c3-8492-e16414570e8e
+    - 1e224561-8114-426a-9c38-b854897811a2
+    - 2d13bb3d-c3f3-4a8c-8691-65a6fdb041df
+    - 84f8965f-4af2-4820-a4d3-889e2b8c4d41
+    - e636a082-12e8-494a-a21c-4180a1554c84
+    - 76d6d28e-3f31-4239-80c3-f4d8d89b4dda
+    - 87a43b4d-7964-4c99-875b-29eb769aa62c
+    - 44f33fa2-aa6e-4b9b-b1b2-843801f2a028
+    - fb399a6d-7639-4467-8a9d-a3dd43fa946c
+    - b33fbd83-6a7c-43e3-8018-64a0a05cdcaf
+    - 7c55caf5-d09b-481b-bec7-f0011f547452
+    - 2db926a7-9ee7-4728-b18d-8af111c72034
+    - df32049c-0fef-461f-a7a4-b463c52f524f
+    - 39105a88-c497-48f8-a6ca-e694a7e11c56
+    - fa7272b9-436a-42f1-85b4-6d78fdc54602
+    - 60aeb6d3-eff4-4507-87ec-3feebb8c0151
+    - 5e69e27f-30f5-4014-b885-39cad0c92576
+    - 5e85084d-ea90-4325-b409-03da46fc42b5
+    - 28d88188-8af2-4ca6-af1b-71b9d5a1042b
+    - 320bb41e-93b9-44ff-9aca-cdb60da2a4ab
+    - 06beb54a-c028-4603-8fba-79559ee11cce
+    - 8d9d21e5-88f2-457d-a5bc-401401fa5769
+    - 633865b7-f5af-43c3-bbd9-51bbbea1c416
+    - dba09a9d-c14f-4771-bd2d-1f733f22c940
+    - e559df38-2e1e-46da-b7ce-5003af7f85a0
+    - 042c1388-c546-4e0b-93b9-7039e29dbb5a
+    - 3133ccd0-2840-4f01-aa9b-a0eeada968bd
+    - 5774b9cb-22d8-4d26-b332-c6da180b21a6
+    - d2c8e916-4a78-4ae6-8b55-b8d90ca13c60
+    - 67b0aa22-b722-4eb4-aa71-5ee37c9685f5
+    - 3578a049-bfb9-41a8-a406-4a830c68dff3
+    - 5cc5bf0c-7410-473b-8b27-c721430cfa04
+    - f9115ffd-8ec4-4de5-a406-73ecb38046b7
+    - 47e22b03-3f89-4686-bb20-7599cd6d22cd
+    - 6be3784b-842d-4e87-851b-1181fdf515f2
+    - 8cf6d8fe-715a-43cd-94d5-920e2f3905d8
+    - 'e43179e9-72cd-43e8-bcb5-52d9f553903b '
+    - 367323dc-9c45-43a5-88c6-6ba87e854f42
+    value_type: array[string]
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: This system lets you generate company-specific financial reports,
+      check their generation status, and run analysis queries on the results. You
+      can specify the **companies** and **dates** for faster, targeted results. If
+      you don’t specify them, the default date is today and the query will run for
+      all companies, which may be slower.
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions:
+    - Generate a report for Stonewood Homes.
+    - Create a report for Stonewood Homes and 55 The Square Limited for July 15, 2025.
+    - Check the status of job ID job_id
+    - What is the total value of aged receivables over 90 days for Stonewood Homes?
+    - Break down aged receivables by aging bucket (0–30, 31–60, 61–90, >90 days) for
+      Stonewood Homes and 55 The Square Limited.
+    - Which customers have the highest outstanding balances for Stonewood Homes?
+    - Show me the top 10 overdue customers for Stonewood Homes.
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: agent
+        targetType: code
+      id: 1753676815909-source-1753824481329-target
+      selected: false
+      source: '1753676815909'
+      sourceHandle: source
+      target: '1753824481329'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: answer
+      id: 1753932344538-source-answer-target
+      selected: false
+      source: '1753932344538'
+      sourceHandle: source
+      target: answer
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: agent
+      id: 1754968552199-source-1753676815909-target
+      selected: false
+      source: '1754968552199'
+      sourceHandle: source
+      target: '1753676815909'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: http-request
+        targetType: code
+      id: 1753823961084-source-1753932344538-target
+      selected: false
+      source: '1753823961084'
+      sourceHandle: source
+      target: '1753932344538'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: http-request
+      id: 1753824481329-source-1753823961084-target
+      selected: false
+      source: '1753824481329'
+      sourceHandle: source
+      target: '1753823961084'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: if-else
+      id: 1754971534072-source-1754971671030-target
+      selected: false
+      source: '1754971534072'
+      sourceHandle: source
+      target: '1754971671030'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: code
+      id: 1754971294358-source-1754971534072-target
+      selected: false
+      source: '1754971294358'
+      sourceHandle: source
+      target: '1754971534072'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: http-request
+      id: 1754967972799-source-1754964821992-target
+      selected: false
+      source: '1754967972799'
+      sourceHandle: source
+      target: '1754964821992'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: code
+      id: llm-source-1754968552199-target
+      selected: false
+      source: llm
+      sourceHandle: source
+      target: '1754968552199'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: start
+        targetType: llm
+      id: 1753314783757-source-1754971294358-target
+      selected: false
+      source: '1753314783757'
+      sourceHandle: source
+      target: '1754971294358'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1754971671030-69c6d6b3-731a-4ce7-aea3-531b003b4301-1754967972799-target
+      selected: false
+      source: '1754971671030'
+      sourceHandle: 69c6d6b3-731a-4ce7-aea3-531b003b4301
+      target: '1754967972799'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: agent
+      id: 1754971671030-true-1754991843628-target
+      selected: false
+      source: '1754971671030'
+      sourceHandle: 'true'
+      target: '1754991843628'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: agent
+        targetType: code
+      id: 1754991843628-source-1754993106891-target
+      selected: false
+      source: '1754991843628'
+      sourceHandle: source
+      target: '1754993106891'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: http-request
+      id: 1754993106891-source-1754962605057-target
+      selected: false
+      source: '1754993106891'
+      sourceHandle: source
+      target: '1754962605057'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: http-request
+        targetType: llm
+      id: 1754964821992-source-1754995092461-target
+      selected: false
+      source: '1754964821992'
+      sourceHandle: source
+      target: '1754995092461'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: answer
+      id: 1754995092461-source-1754968403653-target
+      selected: false
+      source: '1754995092461'
+      sourceHandle: source
+      target: '1754968403653'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: http-request
+        targetType: llm
+      id: 1754962605057-source-1754996169951-target
+      selected: false
+      source: '1754962605057'
+      sourceHandle: source
+      target: '1754996169951'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: answer
+      id: 1754996169951-source-1754962906666-target
+      selected: false
+      source: '1754996169951'
+      sourceHandle: source
+      target: '1754962906666'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: llm
+      id: 1753314783757-source-1755049906691-target
+      selected: false
+      source: '1753314783757'
+      sourceHandle: source
+      target: '1755049906691'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: code
+      id: 1755049906691-source-1755049922069-target
+      selected: false
+      source: '1755049906691'
+      sourceHandle: source
+      target: '1755049922069'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: assigner
+      id: 1755049922069-source-1756955955622-target
+      source: '1755049922069'
+      sourceHandle: source
+      target: '1756955955622'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: question-classifier
+      id: 1754971671030-false-1756956523411-target
+      source: '1754971671030'
+      sourceHandle: 'false'
+      target: '1756956523411'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: llm
+      id: 1756956523411-2-17574674894360-target
+      source: '1756956523411'
+      sourceHandle: '2'
+      target: '17574674894360'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: if-else
+      id: 17574674894360-source-1757468709900-target
+      source: '17574674894360'
+      sourceHandle: source
+      target: '1757468709900'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: llm
+      id: 1756956523411-1-llm-target
+      source: '1756956523411'
+      sourceHandle: '1'
+      target: llm
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1757468709900-true-1757469951739-target
+      source: '1757468709900'
+      sourceHandle: 'true'
+      target: '1757469951739'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: answer
+      id: 1757469951739-source-1757470223296-target
+      source: '1757469951739'
+      sourceHandle: source
+      target: '1757470223296'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: http-request
+      id: 1757468709900-false-1757470603566-target
+      source: '1757468709900'
+      sourceHandle: 'false'
+      target: '1757470603566'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: http-request
+        targetType: llm
+      id: 1757470603566-source-1757470692293-target
+      source: '1757470603566'
+      sourceHandle: source
+      target: '1757470692293'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: answer
+      id: 1757470692293-source-1757471151667-target
+      source: '1757470692293'
+      sourceHandle: source
+      target: '1757471151667'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: assigner
+        targetType: assigner
+      id: 1756955955622-source-1757472636246-target
+      source: '1756955955622'
+      sourceHandle: source
+      target: '1757472636246'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: assigner
+        targetType: if-else
+      id: 1757472636246-source-1754971671030-target
+      source: '1757472636246'
+      sourceHandle: source
+      target: '1754971671030'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: llm
+      id: 1756956523411-1756958283962-17574761095630-target
+      source: '1756956523411'
+      sourceHandle: '1756958283962'
+      target: '17574761095630'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: if-else
+      id: 17574761095630-source-17574761951650-target
+      source: '17574761095630'
+      sourceHandle: source
+      target: '17574761951650'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 17574761951650-true-17574762415150-target
+      source: '17574761951650'
+      sourceHandle: 'true'
+      target: '17574762415150'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: answer
+      id: 17574762415150-source-17574762834100-target
+      source: '17574762415150'
+      sourceHandle: source
+      target: '17574762834100'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: http-request
+      id: 17574761951650-false-17574763221700-target
+      source: '17574761951650'
+      sourceHandle: 'false'
+      target: '17574763221700'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: http-request
+        targetType: llm
+      id: 17574763221700-source-17574763683530-target
+      source: '17574763221700'
+      sourceHandle: source
+      target: '17574763683530'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: answer
+      id: 17574763683530-source-17574764246360-target
+      source: '17574763683530'
+      sourceHandle: source
+      target: '17574764246360'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: llm
+      id: 1756956523411-1756958289238-17574768197240-target
+      source: '1756956523411'
+      sourceHandle: '1756958289238'
+      target: '17574768197240'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: if-else
+      id: 17574768197240-source-17574768493090-target
+      source: '17574768197240'
+      sourceHandle: source
+      target: '17574768493090'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 17574768493090-true-17574768964600-target
+      source: '17574768493090'
+      sourceHandle: 'true'
+      target: '17574768964600'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: answer
+      id: 17574768964600-source-17574769234930-target
+      source: '17574768964600'
+      sourceHandle: source
+      target: '17574769234930'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: http-request
+      id: 17574768493090-false-17574770209610-target
+      source: '17574768493090'
+      sourceHandle: 'false'
+      target: '17574770209610'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: http-request
+        targetType: llm
+      id: 17574770209610-source-17574770984230-target
+      source: '17574770209610'
+      sourceHandle: source
+      target: '17574770984230'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: answer
+      id: 17574770984230-source-17574771196420-target
+      source: '17574770984230'
+      sourceHandle: source
+      target: '17574771196420'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: llm
+      id: 1756956523411-1757475331988-17574771518970-target
+      source: '1756956523411'
+      sourceHandle: '1757475331988'
+      target: '17574771518970'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: answer
+      id: 17574771518970-source-1757477328447-target
+      source: '17574771518970'
+      sourceHandle: source
+      target: '1757477328447'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: ''
+        selected: false
+        title: Start
+        type: start
+        variables: []
+      height: 54
+      id: '1753314783757'
+      position:
+        x: 516.5725332117581
+        y: 794.8487732108837
+      positionAbsolute:
+        x: 516.5725332117581
+        y: 794.8487732108837
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        memory:
+          query_prompt_template: '{{#sys.query#}}
+
+
+            {{#sys.files#}}'
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: false
+            size: 10
+        model:
+          completion_params:
+            json_schema: "{\n\n  \"name\": \"detect_aged_receivables_intent\",\n\n\
+              \  \"description\": \"Extracts the user's intent and related parameters\
+              \ for queries about aged receivables, such as summary reports, customer\
+              \ risk, trends, or forecasting.\",\n\n  \"strict\": true,\n\n  \"schema\"\
+              : {\n\n    \"type\": \"object\",\n\n    \"properties\": {\n\n      \"\
+              intent_category\": {\n\n        \"type\": \"string\",\n\n        \"\
+              description\": \"The high-level intent of the user query regarding aged\
+              \ receivables.\",\n\n        \"enum\": [\n\n          \"summary_breakdown\"\
+              ,\n\n          \"customer_risk\",\n\n          \"customer_behavior\"\
+              ,\n\n          \"forecasting\",\n\n          \"comparative_analysis\"\
+              ,\n\n          \"trend_analysis\"\n\n        ]\n\n      },\n\n     \
+              \ \"reporting_period\": {\n\n        \"type\": \"object\",\n\n     \
+              \   \"description\": \"Time range over which aged receivables are being\
+              \ analyzed.\",\n\n        \"properties\": {\n\n          \"raw\": {\n\
+              \n            \"type\": \"string\",\n\n            \"nullable\": true\n\
+              \n          }\n\n        },\n\n        \"required\": [\"raw\"],\n\n\
+              \        \"nullable\": true,\n\n        \"additionalProperties\": false\n\
+              \n      },\n\n      \"time_granularity\": {\n\n        \"type\": \"\
+              string\",\n\n        \"description\": \"The unit of time over which\
+              \ results should be grouped or analyzed.\",\n\n        \"enum\": [\"\
+              monthly\", \"weekly\", \"quarterly\", \"yearly\"],\n\n        \"nullable\"\
+              : true\n\n      },\n\n      \"aging_buckets\": {\n\n        \"type\"\
+              : \"array\",\n\n        \"description\": \"List of normalized aging\
+              \ buckets mentioned in the query.\",\n\n        \"items\": {\n\n   \
+              \       \"type\": \"object\",\n\n          \"properties\": {\n\n   \
+              \         \"label\": {\n\n              \"type\": \"string\",\n\n  \
+              \            \"enum\": [\"0-30\", \"31-60\", \"61-90\", \">90\", \"\
+              overdue\", \"all\"]\n\n            },\n\n            \"unit\": {\n\n\
+              \              \"type\": [\"string\", \"null\"],\n\n              \"\
+              enum\": [\"days\", \"weeks\", \"months\", null]\n\n            }\n\n\
+              \          },\n\n          \"required\": [\"label\", \"unit\"],\n\n\
+              \          \"additionalProperties\": false\n\n        },\n\n       \
+              \ \"nullable\": true\n\n      },\n\n      \"aging_bucket_definition\"\
+              : {\n\n        \"type\": \"array\",\n\n        \"description\": \"Detailed\
+              \ aging bucket definitions based on user language.\",\n\n        \"\
+              items\": {\n\n          \"type\": \"object\",\n\n          \"properties\"\
+              : {\n\n            \"raw\": {\n\n              \"type\": \"string\"\n\
+              \n            },\n\n            \"lower_bound\": {\n\n             \
+              \ \"type\": \"number\",\n\n              \"nullable\": true\n\n    \
+              \        },\n\n            \"upper_bound\": {\n\n              \"type\"\
+              : \"number\",\n\n              \"nullable\": true\n\n            },\n\
+              \n            \"unit\": {\n\n              \"type\": \"string\",\n\n\
+              \              \"enum\": [\"days\", \"weeks\", \"months\"]\n\n     \
+              \       }\n\n          },\n\n          \"required\": [\"raw\", \"lower_bound\"\
+              , \"upper_bound\", \"unit\"],\n\n          \"additionalProperties\"\
+              : false\n\n        },\n\n        \"nullable\": true\n\n      },\n\n\
+              \      \"customer_focus\": {\n\n        \"type\": \"boolean\",\n\n \
+              \       \"description\": \"True if the query refers to specific customers,\
+              \ segments, or rankings.\"\n\n      },\n\n      \"customer_filter\"\
+              : {\n\n        \"type\": \"array\",\n\n        \"description\": \"List\
+              \ of specific customers, segments, or groups referenced.\",\n\n    \
+              \    \"items\": {\n\n          \"type\": \"string\"\n\n        },\n\n\
+              \        \"nullable\": true\n\n      },\n\n      \"details_requested\"\
+              : {\n\n        \"type\": \"string\",\n\n        \"description\": \"\
+              The type of output or analysis the user is requesting.\",\n\n      \
+              \  \"enum\": [\n\n          \"summary_single\",\n\n          \"breakdown_single\"\
+              ,\n\n          \"ranking_single\",\n\n          \"behavior_single\"\
+              ,\n\n          \"trend_multi\",\n\n          \"forecast_multi\",\n\n\
+              \          \"comparison_multi\"\n\n        ]\n\n      }\n\n    },\n\n\
+              \    \"required\": [\n\n      \"intent_category\",\n\n      \"reporting_period\"\
+              ,\n\n      \"time_granularity\",\n\n      \"aging_buckets\",\n\n   \
+              \   \"aging_bucket_definition\",\n\n      \"customer_focus\",\n\n  \
+              \    \"customer_filter\",\n\n      \"details_requested\"\n\n    ],\n\
+              \n    \"additionalProperties\": false\n\n  }\n\n}"
+            max_tokens: 1601
+            response_format: json_schema
+          mode: chat
+          name: gpt-4.1
+          provider: langgenius/openai/openai
+        prompt_template:
+        - id: 54bc833d-173b-424e-bb34-886f7116b319
+          role: system
+          text: "You are an **Aged Receivables Intent Detection Assistant**.\nYour\
+            \ sole responsibility is to read a user’s natural-language question about\
+            \ aged receivables and return exactly one JSON object that conforms to\
+            \ the detect_aged_receivables_intent schema—**no extra text, no explanations,\
+            \ and no missing or stray properties**.\n\n## Field Extraction Sequence:\n\
+            \ \n---\n\n1. intent_category: Classify the analytical purpose of the\
+            \ user’s question into one of:\n     - summary_breakdown – Overall or\
+            \ grouped snapshot (e.g., breakdown by bucket, region, etc.) shown in\
+            \ chat/console.  \n     - customer_risk – Risk identification or prioritization\
+            \ (e.g., high-risk accounts).  \n     - customer_behavior – Behavioral\
+            \ analysis (e.g., customer payment patterns).  \n     - forecasting –\
+            \ Future-oriented queries (e.g., “expected collections next month”). \
+            \ \n     - comparative_analysis – Comparison across time periods or groups.\
+            \  \n     - trend_analysis – Time-based progression (e.g., “by month”,\
+            \ “over time”).\n\n\n---\n\n2. reporting_period: Captures the **time range**\
+            \ over which the user wants to analyze aged receivables.\n   - If the\
+            \ user specifies a range (e.g., \"last 13 months\", \"past 3 quarters\"\
+            , \"from Jan to May\"), copy the raw phrase to raw.\n   - Do not infer\
+            \ or convert to actual dates.\n   - If no time period is specified, set\
+            \ the entire field to null.\n\n---\n\n3. time_granularity\n   - Represents\
+            \ the interval by which data is grouped or analyzed over time.\n   - Detect\
+            \ if the user explicitly mentions a time unit like:\n   - \"monthly\"\
+            \ → “by month”, “monthly trend”\n   - \"weekly\" → “weekly aging”, “week\
+            \ over week”\n   - \"quarterly\" → “QoQ”, “quarter by quarter”\n   - \"\
+            yearly\" → “YOY”, “annual trend”\n  - If not mentioned, set to null.\n\
+            \n---\n\n4. aging_buckets\n   - Represents the buckets/categories of receivables\
+            \ based on aging ranges.\n    - If the user lists buckets like “0–30”,\
+            \ “31–60”, “>90 days”, create an array of objects, each with:\n    - \"\
+            label\" – Normalized bucket label, e.g., \"0-30\", \">90\"\n    - \"unit\"\
+            \ – Time unit: \"days\", \"weeks\", or \"months\" (default to \"days\"\
+            \ if not stated)\n    - If the user mentions general groupings (e.g.,\
+            \ “overdue”, “all”), use that as \"label\" and set \"unit\": null.\n\n\
+            ---\n\n5. aging_bucket_definition\n   - Optional structure to capture\
+            \ more detailed or custom aging definitions.\n   - For each custom range\
+            \ or phrase (e.g., “older than 3 months”, “between 31 and 60 days”), extract:\n\
+            \   - \"raw\" – Original phrase from user\n   - \"lower_bound\" – Numeric\
+            \ lower limit (nullable)\n   - \"upper_bound\" – Numeric upper limit (nullable)\n\
+            \   - \"unit\" – \"days\", \"weeks\", or \"months\"\n   - If no detailed\
+            \ expression is present, set to null.\n\n---\n\n6. customer_focus\n\n\
+            \   - Set to true if the user mentions specific customers, rankings, groups,\
+            \ or segments, such as:\n\n    - “top 10 customers”\n\n    - “Acme Corp”\n\
+            \n    - “high-risk clients”\n\n   - Otherwise, set to false.\n\n\n\n---\n\
+            \n\n\n7. customer_filter\n\n   - If specific customer names, categories,\
+            \ or segments are mentioned, extract them as an array of strings.\n\n\
+            \    - Example: [\"Acme Corp\", \"Global Industries\"]\n\n    - If none,\
+            \ set to null.\n\n\n\n---\n\n\n\n8. details_requested\n\n   - Classify\
+            \ the analytical intent as one of:\n\n     - `\"summary_single\"`: High-level\
+            \ summary (e.g., “show me aged receivables”)\n\n     - `\"breakdown_single\"\
+            `: Breakdown by one dimension (e.g., aging bucket, customer, region)\n\
+            \n     - `\"ranking_single\"`: Ranking of customers/groups (e.g., “top\
+            \ 10 overdue customers”)\n\n     - `\"behavior_single\"`: Customer-specific\
+            \ payment behavior (e.g., “payment trends for Acme Corp”)\n\n     - `\"\
+            trend_multi\"`: Time series trend across multiple time points (e.g., “by\
+            \ month over last 13 months”)\n\n     - `\"forecast_multi\"`: Future projection\
+            \ (e.g., “forecast next quarter”)\n\n     - `\"comparison_multi\"`: Multi-period\
+            \ or multi-group comparisons (e.g., “compare Q1 to Q2”)\n\n   \n\n---\n\
+            \n## Rules & Boundaries\n -  Only return one JSON object—no text, comments,\
+            \ or markup.\n -  Do not infer or assume unspoken information.\n -  Do\
+            \ not call APIs or external tools.\n -  Use \"null\" for objects/arrays\
+            \ if not applicable.\n -  Use false for booleans if not applicable.\n\
+            \ -  Output must strictly conform to the schema—no extra commas, quotes,\
+            \ or brackets.\n - **MUST NOT** hallucinate any information\n\nYour output\
+            \ must be exactly one JSON object—even an accidental comma or extra bracket\
+            \ is invalid.  \n"
+        - id: ad475259-b582-4c7d-83c5-2140bcea0e6e
+          role: user
+          text: '{{#sys.query#}}'
+        selected: false
+        title: Intent detection
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 90
+      id: llm
+      position:
+        x: 2820.7658020237786
+        y: 1124.0924093248216
+      positionAbsolute:
+        x: 2820.7658020237786
+        y: 1124.0924093248216
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: '{{#1753932344538.result#}}'
+        desc: ''
+        selected: false
+        title: Answer
+        type: answer
+        variables: []
+      height: 105
+      id: answer
+      position:
+        x: 3983.964803470167
+        y: 1374.519929978971
+      positionAbsolute:
+        x: 3983.964803470167
+        y: 1374.519929978971
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        agent_parameters:
+          instruction:
+            type: constant
+            value: "You are a data gathering planner for aged receivables analysis.\n\
+              You will receive:\n  - A user query\n  - A structured intent object\
+              \ (produced by an intent parser)\n  - A predefined API schema that defines\
+              \ how aged receivables data can be fetched\n\n## API Schema:\n - `periods`\
+              \ (integer): How many aging periods the query spans. Default is 3 if\
+              \ the user does not specify it.\n - `period_of` (integer): Duration\
+              \ of each period; always set to 1.\n - `period_type` (string): Must\
+              \ be one of: `\"Day\"`, `\"Week\"`, `\"Month\"`. Default is `\"Month\"\
+              ` if the user does not specify it.\n - `show_current` (boolean): Whether\
+              \ to show the \"Current\" bucket separately. If false, combines it with\
+              \ \"< 1 Month\". Default is true if the user does not specify it.\n\
+              \ - `is_response_only` (integer): 1 = return structured response (e.g.,\
+              \ for chatbot), 0 = generate Excel output.\n - `report_date` (array\
+              \ of strings): One or more reporting dates in `\"YYYY-MM-DD\"` format.\n\
+              \n---\n\n## Instructions\n\n### 1. Extract periods and period_type from\
+              \ `intent.reporting_period.raw`\nUse natural language cues to determine:\n\
+              - `periods` = number of historical intervals to cover\n- `period_type`\
+              \ = `\"Day\"`, `\"Week\"`, or `\"Month\"` depending on expression\n\n\
+              **Examples:**\n- \"last 13 months\" → `periods: 13`, `period_type: \"\
+              Month\"`\n- \"past 6 weeks\" → `periods: 6`, `period_type: \"Week\"\
+              `\n- \"next quarter\" → `periods: 3`, `period_type: \"Month\"`\n\n>\
+              \ If expression contains plural form or fractional time (e.g., \"3 quarters\"\
+              , \"1.5 years\"), round up and convert to months unless specified otherwise.\n\
+              \n---\n\n### 2. Set `period_of` = 1 (always fixed)\n\nThis represents\
+              \ one unit per aging group (e.g., 1 day, 1 month).\n\n---\n\n### 3.\
+              \ Set `report_date`\n- If user query or intent implies specific cutoff\
+              \ dates (e.g., \"June 30\"), include each in the array.\n- If no date\
+              \ is mentioned, use **today’s date** in `\"YYYY-MM-DD\"` format.\n\n\
+              **Examples:**\n- \"Compare June 30 and July 31\" → `[\"2025-06-30\"\
+              , \"2025-07-31\"]`\n- \"Generate reports for end of Q1 and Q2\" → `[\"\
+              2025-03-31\", \"2025-06-30\"]`\n- No date → `[<today's date>]`\n\n---\n\
+              \n### 4. Adjust `periods` if query implies exclusive cutoff (X + 1)\n\
+              If user mentions:\n- \"older than X\"\n- \"haven’t paid in the past\
+              \ X\"\n- \"beyond X\"\n- \"before X\"\n\nThen:\n- Add +1 to `periods`\n\
+              - This ensures that the final bucket includes the `>X` aging portion\n\
+              \n**Examples:**\n- \"older than 90 days\" → `periods: 91`, `period_type:\
+              \ \"Day\"`\n- \"no activity in past 12 months\" → `periods: 13`, `period_type:\
+              \ \"Month\"`\n\n---\n\n### 5. Set `show_current`\n- `true` → if user\
+              \ explicitly wants \"Current\" to appear as its own bucket\n- `false`\
+              \ → if \"Current\" should be merged with \"<1 Month\" or similar\n\n\
+              Use cues like:\n- \"Include current separately\" → `true`\n- \"Just\
+              \ show overdue\" → `false`\n\n---\n\n### 6. Set `is_response_only`\n\
+              - `1` → if the user expects a chatbot or API response (e.g., “Show me\
+              \ a summary”)\n- `0` → if user expects file/download (e.g., “Export\
+              \ to Excel” or “generate report”)\n\n---\n\n### 7. Validation\n- `periods`\
+              \ must be a positive integer\n- `period_type` must be one of `\"Day\"\
+              `, `\"Week\"`, or `\"Month\"`\n- `period_of` must be 1\n- Only output\
+              \ one **valid JSON object** conforming to the schema above\n"
+          model:
+            type: constant
+            value:
+              completion_params:
+                json_schema: "{\n  \"name\": \"generate_data_gathering_parameters\"\
+                  ,\n  \"description\": \"Converts user query and structured intent\
+                  \ about aged receivables into concrete API parameters used to fetch\
+                  \ backend data.\",\n  \"strict\": true,\n  \"schema\": {\n    \"\
+                  type\": \"object\",\n    \"properties\": {\n      \"report_date\"\
+                  : {\n        \"type\": \"string\",\n        \"format\": \"date\"\
+                  ,\n        \"description\": \"Report date in YYYY-MM-DD format.\
+                  \ Used as the base reference date (e.g., today or end of analysis\
+                  \ period).\"\n      },\n      \"periods\": {\n        \"type\":\
+                  \ \"integer\",\n        \"minimum\": 1,\n        \"description\"\
+                  : \"Number of aging periods to include (e.g., 13 for 13 months).\"\
+                  \n      },\n      \"period_of\": {\n        \"type\": \"integer\"\
+                  ,\n        \"enum\": [1],\n        \"description\": \"Duration of\
+                  \ each period. Always set to 1 to represent one time unit per bucket.\"\
+                  \n      },\n      \"period_type\": {\n        \"type\": \"string\"\
+                  ,\n        \"enum\": [\"Day\", \"Week\", \"Month\"],\n        \"\
+                  description\": \"Type of the period. Must be one of: 'Day', 'Week',\
+                  \ or 'Month'.\"\n      },\n      \"show_current\": {\n        \"\
+                  type\": \"string\",\n        \"enum\": [\"true\", \"false\"],\n\
+                  \        \"description\": \"Whether to show the 'Current' bucket\
+                  \ separately. Use 'true' to show it separately, or 'false' to combine\
+                  \ it with the '< 1 Month' bucket.\"\n      },\n      \"is_response_only\"\
+                  : {\n        \"type\": \"integer\",\n        \"enum\": [0, 1],\n\
+                  \        \"description\": \"If set to 1, return response only without\
+                  \ generating Excel output. If 0, Excel generation is enabled.\"\n\
+                  \      }\n    },\n    \"required\": [\n      \"report_date\",\n\
+                  \      \"periods\",\n      \"period_of\",\n      \"period_type\"\
+                  ,\n      \"show_current\",\n      \"is_response_only\"\n    ],\n\
+                  \    \"additionalProperties\": false\n  }\n}"
+                response_format: json_schema
+              mode: chat
+              model: gpt-4.1
+              model_type: llm
+              provider: langgenius/openai/openai
+              type: model-selector
+          query:
+            type: constant
+            value: 'User query: {{#sys.query#}}
+
+              Intent object: {{#llm.text#}}'
+          tools:
+            type: constant
+            value:
+            - enabled: true
+              extra:
+                description: A tool for getting the current time.
+              parameters: {}
+              provider_name: time
+              provider_show_name: time
+              schemas:
+              - auto_generate: null
+                default: '%Y-%m-%d %H:%M:%S'
+                form: form
+                human_description:
+                  en_US: Time format in strftime standard.
+                  ja_JP: Time format in strftime standard.
+                  pt_BR: Time format in strftime standard.
+                  zh_Hans: strftime 标准的时间格式。
+                label:
+                  en_US: Format
+                  ja_JP: Format
+                  pt_BR: Format
+                  zh_Hans: 格式
+                llm_description: null
+                max: null
+                min: null
+                name: format
+                options: []
+                placeholder: null
+                precision: null
+                required: false
+                scope: null
+                template: null
+                type: string
+              - auto_generate: null
+                default: UTC
+                form: form
+                human_description:
+                  en_US: Timezone
+                  ja_JP: Timezone
+                  pt_BR: Timezone
+                  zh_Hans: 时区
+                label:
+                  en_US: Timezone
+                  ja_JP: Timezone
+                  pt_BR: Timezone
+                  zh_Hans: 时区
+                llm_description: null
+                max: null
+                min: null
+                name: timezone
+                options:
+                - icon: null
+                  label:
+                    en_US: UTC
+                    ja_JP: UTC
+                    pt_BR: UTC
+                    zh_Hans: UTC
+                  value: UTC
+                - icon: null
+                  label:
+                    en_US: America/New_York
+                    ja_JP: America/New_York
+                    pt_BR: America/New_York
+                    zh_Hans: 美洲/纽约
+                  value: America/New_York
+                - icon: null
+                  label:
+                    en_US: America/Los_Angeles
+                    ja_JP: America/Los_Angeles
+                    pt_BR: America/Los_Angeles
+                    zh_Hans: 美洲/洛杉矶
+                  value: America/Los_Angeles
+                - icon: null
+                  label:
+                    en_US: America/Chicago
+                    ja_JP: America/Chicago
+                    pt_BR: America/Chicago
+                    zh_Hans: 美洲/芝加哥
+                  value: America/Chicago
+                - icon: null
+                  label:
+                    en_US: America/Sao_Paulo
+                    ja_JP: America/Sao_Paulo
+                    pt_BR: América/São Paulo
+                    zh_Hans: 美洲/圣保罗
+                  value: America/Sao_Paulo
+                - icon: null
+                  label:
+                    en_US: Asia/Shanghai
+                    ja_JP: Asia/Shanghai
+                    pt_BR: Asia/Shanghai
+                    zh_Hans: 亚洲/上海
+                  value: Asia/Shanghai
+                - icon: null
+                  label:
+                    en_US: Asia/Ho_Chi_Minh
+                    ja_JP: Asia/Ho_Chi_Minh
+                    pt_BR: Ásia/Ho Chi Minh
+                    zh_Hans: 亚洲/胡志明市
+                  value: Asia/Ho_Chi_Minh
+                - icon: null
+                  label:
+                    en_US: Asia/Tokyo
+                    ja_JP: Asia/Tokyo
+                    pt_BR: Asia/Tokyo
+                    zh_Hans: 亚洲/东京
+                  value: Asia/Tokyo
+                - icon: null
+                  label:
+                    en_US: Asia/Dubai
+                    ja_JP: Asia/Dubai
+                    pt_BR: Asia/Dubai
+                    zh_Hans: 亚洲/迪拜
+                  value: Asia/Dubai
+                - icon: null
+                  label:
+                    en_US: Asia/Kolkata
+                    ja_JP: Asia/Kolkata
+                    pt_BR: Asia/Kolkata
+                    zh_Hans: 亚洲/加尔各答
+                  value: Asia/Kolkata
+                - icon: null
+                  label:
+                    en_US: Asia/Seoul
+                    ja_JP: Asia/Seoul
+                    pt_BR: Asia/Seoul
+                    zh_Hans: 亚洲/首尔
+                  value: Asia/Seoul
+                - icon: null
+                  label:
+                    en_US: Asia/Singapore
+                    ja_JP: Asia/Singapore
+                    pt_BR: Asia/Singapore
+                    zh_Hans: 亚洲/新加坡
+                  value: Asia/Singapore
+                - icon: null
+                  label:
+                    en_US: Europe/London
+                    ja_JP: Europe/London
+                    pt_BR: Europe/London
+                    zh_Hans: 欧洲/伦敦
+                  value: Europe/London
+                - icon: null
+                  label:
+                    en_US: Europe/Berlin
+                    ja_JP: Europe/Berlin
+                    pt_BR: Europe/Berlin
+                    zh_Hans: 欧洲/柏林
+                  value: Europe/Berlin
+                - icon: null
+                  label:
+                    en_US: Europe/Moscow
+                    ja_JP: Europe/Moscow
+                    pt_BR: Europe/Moscow
+                    zh_Hans: 欧洲/莫斯科
+                  value: Europe/Moscow
+                - icon: null
+                  label:
+                    en_US: Australia/Sydney
+                    ja_JP: Australia/Sydney
+                    pt_BR: Australia/Sydney
+                    zh_Hans: 澳大利亚/悉尼
+                  value: Australia/Sydney
+                - icon: null
+                  label:
+                    en_US: Pacific/Auckland
+                    ja_JP: Pacific/Auckland
+                    pt_BR: Pacific/Auckland
+                    zh_Hans: 太平洋/奥克兰
+                  value: Pacific/Auckland
+                - icon: null
+                  label:
+                    en_US: Africa/Cairo
+                    ja_JP: Africa/Cairo
+                    pt_BR: Africa/Cairo
+                    zh_Hans: 非洲/开罗
+                  value: Africa/Cairo
+                placeholder: null
+                precision: null
+                required: false
+                scope: null
+                template: null
+                type: select
+              settings:
+                format:
+                  value:
+                    type: mixed
+                    value: '%Y-%m-%d %H:%M:%S %A'
+                timezone:
+                  value:
+                    type: constant
+                    value: Pacific/Auckland
+              tool_description: A tool for getting the current time.
+              tool_label: Current Time
+              tool_name: current_time
+              type: builtin
+        agent_strategy_label: FunctionCalling
+        agent_strategy_name: function_calling
+        agent_strategy_provider_name: langgenius/agent/agent
+        desc: ''
+        meta:
+          minimum_dify_version: null
+          version: 0.0.2
+        output_schema: null
+        plugin_unique_identifier: langgenius/agent:0.0.19@3850c37e0f04f6ff6f00641fc36ed1d11555b0222470c37aa715218a4c5c95fd
+        selected: false
+        title: Agent
+        tool_node_version: '2'
+        type: agent
+      height: 198
+      id: '1753676815909'
+      position:
+        x: 3429.7210174566467
+        y: 1124.0468868751848
+      positionAbsolute:
+        x: 3429.7210174566467
+        y: 1124.0468868751848
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data:
+          - id: key-value-5909
+            key: ''
+            type: text
+            value: '{   "report_date": "{{#1753824481329.report_date#}}",   "periods":
+              "{{#1753824481329.periods#}}",   "period_of": "{{#1753824481329.period_of#}}",
+                "period_type": "{{#1753824481329.period_type#}}",   "show_current":
+              "{{#1753824481329.show_current#}}",   "user_query": "{{#sys.query#}}",
+                "is_response_only": "{{#1753824481329.is_response_only#}}",   "connection_id":
+              "{{#1755049922069.result#}}",   "companies": "{{#1755049922069.companies#}}"
+              }'
+          type: raw-text
+        desc: ''
+        headers: api_key:NrGvgAC9yjCKiVOU7xlMzR0N6HxhM600PErRiKvDmzHfUHnEcecEQlwaUPOJi3nUhDcrV1NakIUa9nLkOEhG1bzGYZv4j8rRvOrCW29pK5HpeHp4S2EfwsWwg0D2P8y1
+        method: post
+        params: 'user_query:{{#sys.query#}}
+
+          report_date:{{#1753824481329.report_date#}}
+
+          periods:{{#1753824481329.periods#}}
+
+          period_of:{{#1753824481329.period_of#}}
+
+          period_type:{{#1753824481329.period_type#}}
+
+          show_current:{{#1753824481329.show_current#}}
+
+          connection_id:{{#1755049922069.result#}}
+
+          companies:{{#1755049922069.companies#}}
+
+          is_response_only:{{#1753824481329.is_response_only#}}'
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 100
+        selected: false
+        ssl_verify: true
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: AR question process
+        type: http-request
+        url: https://stonewood.app.n8n.cloud/webhook/age_receivable_abhi
+        variables: []
+      height: 156
+      id: '1753823961084'
+      position:
+        x: 3987.7001460377182
+        y: 1124.834606279715
+      positionAbsolute:
+        x: 3987.7001460377182
+        y: 1124.834606279715
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "import json\ndef main(param_output: str) -> dict:\n    dic = json.loads(param_output)\n\
+          \n    return {\n        \"report_date\": str(dic[\"report_date\"]),\n  \
+          \      \"periods\": str(dic[\"periods\"]),\n        \"period_of\": str(dic[\"\
+          period_of\"]),\n        \"period_type\": str(dic[\"period_type\"]),\n  \
+          \      \"show_current\": str(dic[\"show_current\"]),\n        \"is_response_only\"\
+          : str(dic[\"is_response_only\"])\n    }\n"
+        code_language: python3
+        desc: ''
+        outputs:
+          is_response_only:
+            children: null
+            type: string
+          period_of:
+            children: null
+            type: string
+          period_type:
+            children: null
+            type: string
+          periods:
+            children: null
+            type: string
+          report_date:
+            children: null
+            type: string
+          show_current:
+            children: null
+            type: string
+        selected: false
+        title: Code
+        type: code
+        variables:
+        - value_selector:
+          - '1753676815909'
+          - text
+          value_type: string
+          variable: param_output
+      height: 54
+      id: '1753824481329'
+      position:
+        x: 3691.8043567366462
+        y: 1124.0468868751848
+      positionAbsolute:
+        x: 3691.8043567366462
+        y: 1124.0468868751848
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "import json\ndef main(arg1: str) -> dict:\n    output = json.loads(arg1)\n\
+          \    if not output:\n        return {\n            \"result\": str(output)\n\
+          \        }\n    output = output[0]['output']\n    return {\n        \"result\"\
+          : output,\n    }\n"
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: Code 2
+        type: code
+        variables:
+        - value_selector:
+          - '1753823961084'
+          - body
+          value_type: string
+          variable: arg1
+      height: 54
+      id: '1753932344538'
+      position:
+        x: 3983.964803470167
+        y: 1291.9008174829862
+      positionAbsolute:
+        x: 3983.964803470167
+        y: 1291.9008174829862
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data: []
+          type: none
+        desc: ''
+        headers: x-api-key:mQTobC69fto8pHDD4JeCMttgBYElBfnCL9AG6u4FsPsnEogmQ8jNGVPAMD4156wGIMhNNQJ9Xqd5y2nBzpvf3JKfwZOccpEcE8d834XPULdRW5e8O4p4klQInK0kyCVa
+        method: get
+        params: ''
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 100
+        selected: false
+        ssl_verify: true
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: Generate report
+        type: http-request
+        url: https://finance-assistant-api.fly.dev/api/v1/reports/aged-receivables?report_date={{#1754993106891.report_date#}}&connection_id={{#1755049922069.result#}}&periods={{#1754993106891.periods#}}&period_of={{#1754993106891.period_of#}}&period_type={{#1754993106891.period_type#}}&show_current={{#1754993106891.show_current#}}
+        variables: []
+      height: 334
+      id: '1754962605057'
+      position:
+        x: 3037.967700708753
+        y: 425.20493420794776
+      positionAbsolute:
+        x: 3037.967700708753
+        y: 425.20493420794776
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: '{{#1754996169951.text#}}'
+        desc: ''
+        selected: false
+        title: Answer 2
+        type: answer
+        variables: []
+      height: 105
+      id: '1754962906666'
+      position:
+        x: 3629.9474881264614
+        y: 425.20493420794776
+      positionAbsolute:
+        x: 3629.9474881264614
+        y: 425.20493420794776
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data: []
+          type: none
+        desc: ''
+        headers: x-api-key:mQTobC69fto8pHDD4JeCMttgBYElBfnCL9AG6u4FsPsnEogmQ8jNGVPAMD4156wGIMhNNQJ9Xqd5y2nBzpvf3JKfwZOccpEcE8d834XPULdRW5e8O4p4klQInK0kyCVa
+        method: get
+        params: ''
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 100
+        selected: false
+        ssl_verify: true
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTP Request 3
+        type: http-request
+        url: https://finance-assistant-api.fly.dev/api/v1/reports/job/{{#1754967972799.text#}}
+        variables: []
+      height: 159
+      id: '1754964821992'
+      position:
+        x: 2743.3488112538753
+        y: 871.1564016408179
+      positionAbsolute:
+        x: 2743.3488112538753
+        y: 871.1564016408179
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: gpt-4.1-mini
+          provider: langgenius/openai/openai
+        prompt_template:
+        - id: 0de77573-71c8-4a32-a096-a62deeb50ee3
+          role: system
+          text: "```xml\n<instruction>\nYou will be given a user query that may or\
+            \ may not contain a job id. Your task is to carefully analyze the user\
+            \ query and extract the job id if present. The job id to look for always\
+            \ starts with \"aged_receivables_report_\". \n\nFollow these steps to\
+            \ complete the task:\n\n1. Read the entire user query carefully.\n2. Identify\
+            \ any substring that begins exactly with \"aged_receivables_report_\"\
+            .\n3. Extract the full job id string from the query, which is the entire\
+            \ continuous sequence starting with \"aged_receivables_report_\" until\
+            \ the next whitespace, punctuation, or string termination.\n4. If there\
+            \ is more than one such substring, extract the first occurrence only.\n\
+            5. If no matching job id is present in the query, return \"No job id found\"\
+            .\n6. The output should only include the extracted job id string or the\
+            \ phrase \"No job id found\". Do not include any XML tags or markup in\
+            \ the output.\n7. Ensure the extracted job id is an exact match without\
+            \ any alterations or truncations.\n8. Be case-sensitive; the job id must\
+            \ exactly start with lowercase \"aged_receivables_report_\".\n\nThis will\
+            \ help in retrieving or getting the status of the job based on the provided\
+            \ job id.\n\n<examples>\n<example>\nUser query: \"Can you please provide\
+            \ the status of aged_receivables_report_2024_03_15_01?\"\nOutput: \"aged_receivables_report_2024_03_15_01\"\
+            \n</example>\n\n<example>\nUser query: \"I want to check the job status\
+            \ for the report with id aged_receivables_report_final_9876 and also for\
+            \ another job.\"\nOutput: \"aged_receivables_report_final_9876\"\n</example>\n\
+            \n<example>\nUser query: \"What is the status of my request?\"\nOutput:\
+            \ \"No job id found\"\n</example>\n</examples>\n</instruction>\n```"
+        - id: 447e145a-f279-436a-827e-ff3b009b3ac3
+          role: user
+          text: '{{#sys.query#}}'
+        selected: false
+        title: Identify job ID
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 90
+      id: '1754967972799'
+      position:
+        x: 2489.24864520371
+        y: 871.1564016408179
+      positionAbsolute:
+        x: 2489.24864520371
+        y: 871.1564016408179
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: '{{#1754995092461.text#}}'
+        desc: ''
+        selected: false
+        title: Answer 3
+        type: answer
+        variables: []
+      height: 105
+      id: '1754968403653'
+      position:
+        x: 3315.825472626223
+        y: 871.1564016408179
+      positionAbsolute:
+        x: 3315.825472626223
+        y: 871.1564016408179
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "import json\n\ndef main(intent_dic: str) -> dict:\n    dic = json.loads(intent_dic)\n\
+          \    return {\n        \"details_requested\": dic[\"intent_category\"],\n\
+          \    }\n"
+        code_language: python3
+        desc: ''
+        outputs:
+          details_requested:
+            children: null
+            type: string
+        selected: false
+        title: Code 3
+        type: code
+        variables:
+        - value_selector:
+          - llm
+          - text
+          value_type: string
+          variable: intent_dic
+      height: 54
+      id: '1754968552199'
+      position:
+        x: 3129.7210174566467
+        y: 1124.0468868751848
+      positionAbsolute:
+        x: 3129.7210174566467
+        y: 1124.0468868751848
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4.1-mini
+          provider: langgenius/openai/openai
+        prompt_template:
+        - id: ddd8db3f-6c7d-4477-b986-bee1dee44490
+          role: system
+          text: "You are an **Aged Receivables Routing Classifier**.\n\nGoal: Read\
+            \ a single user message and decide whether it is about:\n- \"generate_report\"\
+            : create/prepare/build/export a formal report document (e.g., PDF/Excel),\
+            \ often to be **emailed** or downloaded. Also covers re-running/regenerating\
+            \ a report.\n- \"job_status\": check the status/progress/result/download\
+            \ of a previously requested report generation **by job_id** (e.g., queued/in_progress/completed/failed).\n\
+            - \"analytical\": on-screen analysis/insight only (summary/breakdown/trend/forecast/comparison/behavior/ranking),\
+            \ NOT asking to create/export/send a file.\n- \"other\": not related.\n\
+            \nPriority rules (apply top-to-bottom):\n1) If the message asks about\
+            \ the status/result/download/cancel of a generated report AND/OR includes\
+            \ a job_id → route = \"job_status\".\n2) Else if the message asks to generate/prepare/create/build/export\
+            \ a **report/document/file** or to **email/send** it → route = \"generate_report\"\
+            .\n   - Phrases like “generate/prepare/create/build/export/report/document/file/email/send/deliver”\
+            \ combined with “report/statement” are strong triggers.\n3) Else if the\
+            \ message asks to show/display/view/list data, or requests summaries,\
+            \ breakdowns, trends, forecasts, comparisons on-screen → route = \"analytical\"\
+            .\n4) Otherwise → route = \"other\".\n\nNon-triggers (do NOT count as\
+            \ generate_report):\n- “show/display/view/list/report” meaning just show\
+            \ data on-screen (no creation/export/email implied).\n- “report” used\
+            \ as a synonym for “results/summary” without asking to create a file.\n\
+            \nExtraction:\n- job_id: If the user provides an identifier for a generated\
+            \ report (e.g., UUID, alphanumerics with dashes/underscores), extract\
+            \ the raw string.\n- email_delivery_requested: true if the user explicitly\
+            \ asks to email/send/deliver the generated report to an inbox; false otherwise.\n\
+            \nOutput (JSON only, no extra text):\n{\n  \"route\": \"generate_report\"\
+            \ | \"job_status\" | \"analytical\",\n  \"job_id\": string | null,\n \
+            \ \"email_delivery_requested\": boolean,\n  \"confidence\": number  //\
+            \ 0.0 ~ 1.0\n}\n\nConstraints:\n- Return exactly one JSON object.\n- No\
+            \ explanations, no comments.\n- Do not infer unstated details (e.g., dates,\
+            \ customer names).\n- If multiple cues appear, apply the Priority rules.\n\
+            \n### Few-shot examples\n\nUser: \"Generate the monthly aged receivables\
+            \ report and email it to me.\"\n{\n  \"route\": \"generate_report\",\n\
+            \  \"job_id\": null,\n  \"email_delivery_requested\": true,\n  \"confidence\"\
+            : 0.94\n}\n\nUser: \"What's the status of job 9f2a-11c4? I need the report.\"\
+            \n{\n  \"route\": \"job_status\",\n  \"job_id\": \"9f2a-11c4\",\n  \"\
+            email_delivery_requested\": false,\n  \"confidence\": 0.96\n}\n\nUser:\
+            \ \"Show me the aged receivables breakdown by bucket for the last quarter.\"\
+            \n{\n  \"route\": \"analytical\",\n  \"job_id\": null,\n  \"email_delivery_requested\"\
+            : false,\n  \"confidence\": 0.88\n}\n\nUser: \"Export the 0–30/31–60/61–90\
+            \ summary to a PDF.\"\n{\n  \"route\": \"generate_report\",\n  \"job_id\"\
+            : null,\n  \"email_delivery_requested\": false,\n  \"confidence\": 0.90\n\
+            }\n\nUser: \"Email the updated receivables statement for APAC.\"\n{\n\
+            \  \"route\": \"generate_report\",\n  \"job_id\": null,\n  \"email_delivery_requested\"\
+            : true,\n  \"confidence\": 0.92\n}\n\nUser: \"Download report for job\
+            \ ABC_123-XYZ.\"\n{\n  \"route\": \"job_status\",\n  \"job_id\": \"ABC_123-XYZ\"\
+            ,\n  \"email_delivery_requested\": false,\n  \"confidence\": 0.93\n}\n\
+            \nUser: \"I want a report, but just show it here, no need to send.\"\n\
+            {\n  \"route\": \"analytical\",\n  \"job_id\": null,\n  \"email_delivery_requested\"\
+            : false,\n  \"confidence\": 0.80\n}\n"
+        - id: 1c3106ad-1614-4476-95fa-2dd425049142
+          role: user
+          text: '{{#sys.query#}}'
+        selected: false
+        title: LLM 3
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 90
+      id: '1754971294358'
+      position:
+        x: 840.754705776746
+        y: 666.8570925758414
+      positionAbsolute:
+        x: 840.754705776746
+        y: 666.8570925758414
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "import json\ndef main(arg1: str) -> dict:\n    dic = json.loads(arg1)\n\
+          \    return {\n        \"route\": dic['route'],\n    }\n"
+        code_language: python3
+        desc: ''
+        outputs:
+          route:
+            children: null
+            type: string
+        selected: false
+        title: Code 4
+        type: code
+        variables:
+        - value_selector:
+          - '1754971294358'
+          - text
+          value_type: string
+          variable: arg1
+      height: 54
+      id: '1754971534072'
+      position:
+        x: 1131.8945969060662
+        y: 666.8570925758414
+      positionAbsolute:
+        x: 1131.8945969060662
+        y: 666.8570925758414
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: is
+            id: ed225b50-3f6d-4e24-8436-f8b38ab6ee8f
+            value: generate_report
+            varType: string
+            variable_selector:
+            - '1754971534072'
+            - route
+          id: 'true'
+          logical_operator: and
+        - case_id: 69c6d6b3-731a-4ce7-aea3-531b003b4301
+          conditions:
+          - comparison_operator: is
+            id: f5b79829-f7ec-4766-9c8a-06d2d8a7321e
+            value: job_status
+            varType: string
+            variable_selector:
+            - '1754971534072'
+            - route
+          id: 69c6d6b3-731a-4ce7-aea3-531b003b4301
+          logical_operator: and
+        desc: ''
+        selected: false
+        title: IF/ELSE
+        type: if-else
+      height: 174
+      id: '1754971671030'
+      position:
+        x: 2069.8465984284758
+        y: 794.8487732108837
+      positionAbsolute:
+        x: 2069.8465984284758
+        y: 794.8487732108837
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        agent_parameters:
+          instruction:
+            type: constant
+            value: "You are a data gathering planner for aged receivables analysis.\n\
+              You will receive:\n  - A user query\n  - A structured intent object\
+              \ (produced by an intent parser)\n  - A predefined API schema that defines\
+              \ how aged receivables data can be fetched\n\n## API Schema:\n - `periods`\
+              \ (integer): How many aging periods the query spans. Default is 3 if\
+              \ the user does not specify it.\n - `period_of` (integer): Duration\
+              \ of each period; always set to 1.\n - `period_type` (string): Must\
+              \ be one of: `\"Day\"`, `\"Week\"`, `\"Month\"`. Default is `\"Month\"\
+              ` if the user does not specify it.\n - `show_current` (boolean): Whether\
+              \ to show the \"Current\" bucket separately. If false, combines it with\
+              \ \"< 1 Month\". Default is false if the user does not specify it.\n\
+              \ - `report_date` (array of strings): One or more reporting dates in\
+              \ `\"YYYY-MM-DD\"` format.\n\n\n---\n\n## Instructions\n\n### 1. Extract\
+              \ periods and period_type from `intent.reporting_period.raw`\nUse natural\
+              \ language cues to determine:\n- `periods` = number of historical intervals\
+              \ to cover\n- `period_type` = `\"Day\"`, `\"Week\"`, or `\"Month\"`\
+              \ depending on expression\n\n**Examples:**\n- \"last 13 months\" → `periods:\
+              \ 13`, `period_type: \"Month\"`\n- \"past 6 weeks\" → `periods: 6`,\
+              \ `period_type: \"Week\"`\n- \"next quarter\" → `periods: 3`, `period_type:\
+              \ \"Month\"`\n\n> If expression contains plural form or fractional time\
+              \ (e.g., \"3 quarters\", \"1.5 years\"), round up and convert to months\
+              \ unless specified otherwise.\n\n---\n\n### 2. Set `period_of` = 1 (always\
+              \ fixed)\n\nThis represents one unit per aging group (e.g., 1 day, 1\
+              \ month).\n\n---\n\n### 3. Set `report_date`\n- If user query or intent\
+              \ implies specific cutoff dates (e.g., \"June 30\"), include each in\
+              \ the array.\n- If no date is mentioned, use **today’s date** in `\"\
+              YYYY-MM-DD\"` format.\n\n**Examples:**\n- \"Compare June 30 and July\
+              \ 31\" → `[\"2025-06-30\", \"2025-07-31\"]`\n- \"Generate reports for\
+              \ end of Q1 and Q2\" → `[\"2025-03-31\", \"2025-06-30\"]`\n- No date\
+              \ → `[<today's date>]`\n\n---\n\n### 4. Adjust `periods` if query implies\
+              \ exclusive cutoff (X + 1)\nIf user mentions:\n- \"older than X\"\n\
+              - \"haven’t paid in the past X\"\n- \"beyond X\"\n- \"before X\"\n\n\
+              Then:\n- Add +1 to `periods`\n- This ensures that the final bucket includes\
+              \ the `>X` aging portion\n\n**Examples:**\n- \"older than 90 days\"\
+              \ → `periods: 91`, `period_type: \"Day\"`\n- \"no activity in past 12\
+              \ months\" → `periods: 13`, `period_type: \"Month\"`\n\n---\n\n### 5.\
+              \ Set `show_current`\n- `true` → if user explicitly wants \"Current\"\
+              \ to appear as its own bucket\n- `false` → if \"Current\" should be\
+              \ merged with \"<1 Month\" or similar\n\nUse cues like:\n- \"Include\
+              \ current separately\" → `true`\n- \"Just show overdue\" → `false`\n\
+              \n---\n\n### 7. Validation\n- `periods` must be a positive integer\n\
+              - `period_type` must be one of `\"Day\"`, `\"Week\"`, or `\"Month\"\
+              `\n- `period_of` must be 1\n- Only output one **valid JSON object**\
+              \ conforming to the schema above\n"
+          model:
+            type: constant
+            value:
+              completion_params:
+                json_schema: "{\n  \"name\": \"generate_data_gathering_parameters\"\
+                  ,\n  \"description\": \"Converts user query and structured intent\
+                  \ about aged receivables into concrete API parameters used to fetch\
+                  \ backend data.\",\n  \"strict\": true,\n  \"schema\": {\n    \"\
+                  type\": \"object\",\n    \"properties\": {\n      \"report_date\"\
+                  : {\n        \"type\": \"string\",\n        \"format\": \"date\"\
+                  ,\n        \"description\": \"Report date (YYYY-MM-DD). Used as\
+                  \ the base reference date (e.g., today or end of the period).\"\n\
+                  \      },\n      \"periods\": {\n        \"type\": \"integer\",\n\
+                  \        \"minimum\": 1,\n        \"maximum\": 36,\n        \"default\"\
+                  : 13,\n        \"description\": \"Number of aging periods to include\
+                  \ (e.g., 13 for 13 months).\"\n      },\n      \"period_of\": {\n\
+                  \        \"type\": \"integer\",\n        \"const\": 1,\n       \
+                  \ \"description\": \"Duration of each period. Always 1 (one time\
+                  \ unit per bucket).\"\n      },\n      \"period_type\": {\n    \
+                  \    \"type\": \"string\",\n        \"enum\": [\"Day\", \"Week\"\
+                  , \"Month\"],\n        \"default\": \"Month\",\n        \"description\"\
+                  : \"Time unit for each aging bucket.\"\n      },\n      \"show_current\"\
+                  : {\n        \"type\": \"boolean\",\n        \"description\": \"\
+                  Whether to show the 'Current' bucket separately.\"\n      }\n  \
+                  \  },\n    \"required\": [\n      \"report_date\",\n      \"periods\"\
+                  ,\n      \"period_of\",\n      \"period_type\",\n      \"show_current\"\
+                  \n    ],\n    \"additionalProperties\": false\n  }\n}"
+                response_format: json_schema
+              mode: chat
+              model: gpt-4.1-mini
+              model_type: llm
+              provider: langgenius/openai/openai
+              type: model-selector
+          query:
+            type: constant
+            value: '{{#sys.query#}}'
+          tools:
+            type: constant
+            value:
+            - enabled: true
+              extra:
+                description: A tool for getting the current time.
+              parameters: {}
+              provider_name: time
+              provider_show_name: time
+              schemas:
+              - auto_generate: null
+                default: '%Y-%m-%d %H:%M:%S'
+                form: form
+                human_description:
+                  en_US: Time format in strftime standard.
+                  ja_JP: Time format in strftime standard.
+                  pt_BR: Time format in strftime standard.
+                  zh_Hans: strftime 标准的时间格式。
+                label:
+                  en_US: Format
+                  ja_JP: Format
+                  pt_BR: Format
+                  zh_Hans: 格式
+                llm_description: null
+                max: null
+                min: null
+                name: format
+                options: []
+                placeholder: null
+                precision: null
+                required: false
+                scope: null
+                template: null
+                type: string
+              - auto_generate: null
+                default: UTC
+                form: form
+                human_description:
+                  en_US: Timezone
+                  ja_JP: Timezone
+                  pt_BR: Timezone
+                  zh_Hans: 时区
+                label:
+                  en_US: Timezone
+                  ja_JP: Timezone
+                  pt_BR: Timezone
+                  zh_Hans: 时区
+                llm_description: null
+                max: null
+                min: null
+                name: timezone
+                options:
+                - icon: null
+                  label:
+                    en_US: UTC
+                    ja_JP: UTC
+                    pt_BR: UTC
+                    zh_Hans: UTC
+                  value: UTC
+                - icon: null
+                  label:
+                    en_US: America/New_York
+                    ja_JP: America/New_York
+                    pt_BR: America/New_York
+                    zh_Hans: 美洲/纽约
+                  value: America/New_York
+                - icon: null
+                  label:
+                    en_US: America/Los_Angeles
+                    ja_JP: America/Los_Angeles
+                    pt_BR: America/Los_Angeles
+                    zh_Hans: 美洲/洛杉矶
+                  value: America/Los_Angeles
+                - icon: null
+                  label:
+                    en_US: America/Chicago
+                    ja_JP: America/Chicago
+                    pt_BR: America/Chicago
+                    zh_Hans: 美洲/芝加哥
+                  value: America/Chicago
+                - icon: null
+                  label:
+                    en_US: America/Sao_Paulo
+                    ja_JP: America/Sao_Paulo
+                    pt_BR: América/São Paulo
+                    zh_Hans: 美洲/圣保罗
+                  value: America/Sao_Paulo
+                - icon: null
+                  label:
+                    en_US: Asia/Shanghai
+                    ja_JP: Asia/Shanghai
+                    pt_BR: Asia/Shanghai
+                    zh_Hans: 亚洲/上海
+                  value: Asia/Shanghai
+                - icon: null
+                  label:
+                    en_US: Asia/Ho_Chi_Minh
+                    ja_JP: Asia/Ho_Chi_Minh
+                    pt_BR: Ásia/Ho Chi Minh
+                    zh_Hans: 亚洲/胡志明市
+                  value: Asia/Ho_Chi_Minh
+                - icon: null
+                  label:
+                    en_US: Asia/Tokyo
+                    ja_JP: Asia/Tokyo
+                    pt_BR: Asia/Tokyo
+                    zh_Hans: 亚洲/东京
+                  value: Asia/Tokyo
+                - icon: null
+                  label:
+                    en_US: Asia/Dubai
+                    ja_JP: Asia/Dubai
+                    pt_BR: Asia/Dubai
+                    zh_Hans: 亚洲/迪拜
+                  value: Asia/Dubai
+                - icon: null
+                  label:
+                    en_US: Asia/Kolkata
+                    ja_JP: Asia/Kolkata
+                    pt_BR: Asia/Kolkata
+                    zh_Hans: 亚洲/加尔各答
+                  value: Asia/Kolkata
+                - icon: null
+                  label:
+                    en_US: Asia/Seoul
+                    ja_JP: Asia/Seoul
+                    pt_BR: Asia/Seoul
+                    zh_Hans: 亚洲/首尔
+                  value: Asia/Seoul
+                - icon: null
+                  label:
+                    en_US: Asia/Singapore
+                    ja_JP: Asia/Singapore
+                    pt_BR: Asia/Singapore
+                    zh_Hans: 亚洲/新加坡
+                  value: Asia/Singapore
+                - icon: null
+                  label:
+                    en_US: Europe/London
+                    ja_JP: Europe/London
+                    pt_BR: Europe/London
+                    zh_Hans: 欧洲/伦敦
+                  value: Europe/London
+                - icon: null
+                  label:
+                    en_US: Europe/Berlin
+                    ja_JP: Europe/Berlin
+                    pt_BR: Europe/Berlin
+                    zh_Hans: 欧洲/柏林
+                  value: Europe/Berlin
+                - icon: null
+                  label:
+                    en_US: Europe/Moscow
+                    ja_JP: Europe/Moscow
+                    pt_BR: Europe/Moscow
+                    zh_Hans: 欧洲/莫斯科
+                  value: Europe/Moscow
+                - icon: null
+                  label:
+                    en_US: Australia/Sydney
+                    ja_JP: Australia/Sydney
+                    pt_BR: Australia/Sydney
+                    zh_Hans: 澳大利亚/悉尼
+                  value: Australia/Sydney
+                - icon: null
+                  label:
+                    en_US: Pacific/Auckland
+                    ja_JP: Pacific/Auckland
+                    pt_BR: Pacific/Auckland
+                    zh_Hans: 太平洋/奥克兰
+                  value: Pacific/Auckland
+                - icon: null
+                  label:
+                    en_US: Africa/Cairo
+                    ja_JP: Africa/Cairo
+                    pt_BR: Africa/Cairo
+                    zh_Hans: 非洲/开罗
+                  value: Africa/Cairo
+                placeholder: null
+                precision: null
+                required: false
+                scope: null
+                template: null
+                type: select
+              settings:
+                format:
+                  value:
+                    type: mixed
+                    value: '%Y-%m-%d %H:%M:%S'
+                timezone:
+                  value:
+                    type: constant
+                    value: Pacific/Auckland
+              tool_description: A tool for getting the current time.
+              tool_label: Current Time
+              tool_name: current_time
+              type: builtin
+        agent_strategy_label: FunctionCalling
+        agent_strategy_name: function_calling
+        agent_strategy_provider_name: langgenius/agent/agent
+        desc: ''
+        meta:
+          minimum_dify_version: null
+          version: 0.0.2
+        output_schema: null
+        plugin_unique_identifier: langgenius/agent:0.0.19@3850c37e0f04f6ff6f00641fc36ed1d11555b0222470c37aa715218a4c5c95fd
+        selected: false
+        title: API param extraction
+        tool_node_version: '2'
+        type: agent
+      height: 198
+      id: '1754991843628'
+      position:
+        x: 2446.387111740133
+        y: 438.4300287456849
+      positionAbsolute:
+        x: 2446.387111740133
+        y: 438.4300287456849
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "import json\ndef main(param_output: str) -> dict:\n    dic = json.loads(param_output)\n\
+          \n    return {\n        \"report_date\": dic[\"report_date\"],\n       \
+          \ \"periods\": dic[\"periods\"],\n        \"period_of\": dic[\"period_of\"\
+          ],\n        \"period_type\": dic[\"period_type\"],\n        \"show_current\"\
+          : dic[\"show_current\"]\n    }\n\n"
+        code_language: python3
+        desc: ''
+        outputs:
+          period_of:
+            children: null
+            type: number
+          period_type:
+            children: null
+            type: string
+          periods:
+            children: null
+            type: number
+          report_date:
+            children: null
+            type: string
+          show_current:
+            children: null
+            type: number
+        selected: false
+        title: Code 5
+        type: code
+        variables:
+        - value_selector:
+          - '1754991843628'
+          - text
+          value_type: string
+          variable: param_output
+      height: 54
+      id: '1754993106891'
+      position:
+        x: 2737.447278744873
+        y: 425.20493420794776
+      positionAbsolute:
+        x: 2737.447278744873
+        y: 425.20493420794776
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4.1-mini
+          provider: langgenius/openai/openai
+        prompt_template:
+        - id: 498b8262-d0ab-43e7-b119-e715fa9c8839
+          role: system
+          text: 'Given the job status and the user’s query, generate a natural, contextually
+            appropriate response in plain language. The response should:
+
+            Clearly address the user’s request.
+
+            Reflect the job’s current state (e.g., pending, in progress, completed,
+            failed).
+
+            Avoid technical jargon unless the user’s query indicates they expect it.
+
+            The report will be sent to the user''s email if is in processing, and
+            will send to user''s email if completed and let the user to check email.
+
+            Only output the information from the job status and user query.'
+        - id: 36de8fe5-ccbf-4121-9776-db97bd09c218
+          role: user
+          text: 'Here''s the status of the job with the job id:
+
+            {{#1754964821992.body#}}
+
+
+            Here''s user question:
+
+            {{#sys.query#}}'
+        selected: false
+        title: LLM 4
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 90
+      id: '1754995092461'
+      position:
+        x: 3015.825472626223
+        y: 871.1564016408179
+      positionAbsolute:
+        x: 3015.825472626223
+        y: 871.1564016408179
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: gpt-4.1-mini
+          provider: langgenius/openai/openai
+        prompt_template:
+        - id: 8858d254-7342-4c01-ba06-811f7e606198
+          role: system
+          text: 'Given the job status and the user’s query, generate a natural, contextually
+            appropriate response in plain language. The response should:
+
+            Clearly address the user’s request and returned job_id.
+
+            Reflect the job’s current state (e.g., pending, in progress, completed,
+            failed).
+
+            Avoid technical jargon unless the user’s query indicates they expect it.
+
+            Only output the information from the job status and user query.'
+        - id: add09412-577b-4f0e-b9d6-509f847a2861
+          role: user
+          text: 'Here''s the job status:
+
+            {{#1754962605057.body#}}'
+        selected: false
+        title: LLM 5
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 90
+      id: '1754996169951'
+      position:
+        x: 3329.9474881264614
+        y: 425.20493420794776
+      positionAbsolute:
+        x: 3329.9474881264614
+        y: 425.20493420794776
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        memory:
+          query_prompt_template: '{{#sys.query#}}
+
+
+            {{#sys.files#}}'
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: true
+            size: 50
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4.1-mini
+          provider: langgenius/openai/openai
+        prompt_template:
+        - id: 98dbaadc-04dc-4f66-8bdc-2ef9529ca5cd
+          role: system
+          text: "You are a company name matcher.\n\n\n## Company List (index → company\
+            \ name)\nBEGIN_COMPANY_LIST\n{{#conversation.company_idx#}}\nEND_COMPANY_LIST\n\
+            \n\n## Memory (may be blank; CSV of canonical names, left→right order)\n\
+            LAST_COMPANY_NAMES_CSV: {{#conversation.last_companies#}}\n\n\n## Task\n\
+            - From the user message, extract ALL company mentions that match the list.\n\
+            - Matching is case/spacing/punctuation tolerant and ignores suffixes like\
+            \ \"Ltd\", \"Limited\", \"Partnership\".\n- Preserve the order in which\
+            \ companies appear in the user message.\n- If the user mentions NO company\
+            \ and explicitly did NOT said \"all companies\", \"all\":\n  - If LAST_COMPANY_NAMES_CSV\
+            \ is non-empty, interpret it as the previously selected set (may contain\
+            \ one OR multiple names). For each name in that CSV (left→right), match\
+            \ it to the list and build the output array IN THAT CSV ORDER. Skip only\
+            \ names that cannot be matched. Do NOT invent.\n  - If LAST_COMPANY_NAMES_CSV\
+            \ is empty, treat the request as \"all companies\" and **return an empty\
+            \ array []** to signal ALL.\n- Do NOT invent new companies or indexes.\n\
+            \n\n## Output format (STRICT)\nReturn ONLY a JSON array. Each element:\n\
+            {\n  \"index\": <integer or null>,\n  \"mention\": \"<exact text from\
+            \ the user message OR the remembered company name>\"\n}\n\n\n## Examples\n\
+            \n\nUser: \"322 K RD and Top of Tory\"\nOutput:\n[\n  {\"index\": 19,\
+            \ \"mention\": \"322 K RD\"},\n  {\"index\": 23, \"mention\": \"Top of\
+            \ Tory\"}\n]\n\n\n(Assume LAST_COMPANY_NAMES_CSV = \"322 K RD Limited,Top\
+            \ of Tory Limited\")\nUser: \"List the invoices\"\nOutput:\n[\n  {\"index\"\
+            : 19, \"mention\": \"322 K RD Limited\"},\n  {\"index\": 23, \"mention\"\
+            : \"Top of Tory Limited\"}\n]\n\n\n(Assume LAST_COMPANY_NAMES_CSV = \"\
+            \")\nUser: \"List the invoices\"\n→ No company mentioned, no memory →\
+            \ use ALL\nOutput: []"
+        - id: 5e656086-5778-4070-a774-fccaef1c56e9
+          role: user
+          text: '{{#sys.query#}}'
+        selected: false
+        title: Identify companies
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 90
+      id: '1755049906691'
+      position:
+        x: 829.029064855136
+        y: 882.4815208771902
+      positionAbsolute:
+        x: 829.029064855136
+        y: 882.4815208771902
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "import json\n\ndef main(company_id: str, company_idx, company_match)\
+          \ -> dict:\n    arr = json.loads(company_id)\n    ids = []\n    cmps = []\n\
+          \    if arr:\n        for dic in arr:\n            idx = int(dic[\"index\"\
+          ])\n            ids.append(company_idx[idx])\n            cmps.append(company_match[idx])\n\
+          \            \n    return {\n        \"result\": \",\".join(ids),\n    \
+          \    \"companies\": \",\".join(cmps)\n    }\n"
+        code_language: python3
+        desc: ''
+        outputs:
+          companies:
+            children: null
+            type: string
+          result:
+            children: null
+            type: string
+        selected: false
+        title: Extract connection ID
+        type: code
+        variables:
+        - value_selector:
+          - '1755049906691'
+          - text
+          value_type: string
+          variable: company_id
+        - value_selector:
+          - conversation
+          - connect_id_arr
+          value_type: array[string]
+          variable: company_idx
+        - value_selector:
+          - conversation
+          - company_match
+          value_type: array[string]
+          variable: company_match
+      height: 54
+      id: '1755049922069'
+      position:
+        x: 1133.029064855136
+        y: 882.4815208771902
+      positionAbsolute:
+        x: 1133.029064855136
+        y: 882.4815208771902
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        items:
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1755049922069'
+          - companies
+          variable_selector:
+          - conversation
+          - last_companies
+          write_mode: over-write
+        selected: false
+        title: Variable Assigner 2
+        type: assigner
+        version: '2'
+      height: 86
+      id: '1756955955622'
+      position:
+        x: 1464.76068414776
+        y: 882.4815208771902
+      positionAbsolute:
+        x: 1464.76068414776
+        y: 882.4815208771902
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        classes:
+        - id: '1'
+          name: REPORT
+        - id: '2'
+          name: INVOICE
+        - id: '1756958283962'
+          name: CREDIT_NOTE
+        - id: '1756958289238'
+          name: OVERPAYMENT
+        - id: '1757475331988'
+          name: GENERAL
+        desc: ''
+        instruction: 'You are an intent labeler and parameter extractor for Accounts
+          Receivable questions.
+
+          Choose exactly ONE route and extract normalized parameters.
+
+          ROUTES (choose one)
+
+          INVOICE: about a specific invoice or an explicit set of specific invoices
+          (status, due date, amount due, line items, payments). Must reference at
+          least one concrete invoice ID (INV* or SI*), or be anaphoric to a previously
+          discussed invoice.
+
+          CREDIT_NOTE: about a single, specific credit note (including its allocations/application).
+          Must reference a credit note number or be anaphoric to a previously discussed
+          credit note.
+
+          OVERPAYMENT: about a single, specific overpayment (including its allocations/application).
+          Must reference an overpayment ID/UUID or be anaphoric to a previously discussed
+          overpayment.
+
+          REPORT (default): lists/summaries/aging/totals/rankings/filters WITHOUT
+          explicit invoice IDs, or across companies/portfolios; e.g., “who has most
+          outstanding”, “list/show invoices”, “outstanding invoices”, “overdue invoices”,
+          “aging for ABC”, “all invoices”.
+
+          GENERAL: greetings, small talk, or messages not clearly about Accounts Receivable.
+
+          PATTERNS (normalize)
+
+          Invoice number (INV): (?i)\bINV[-\s]?(\d{1,6})\b → output "INV-<digits>"
+
+          Invoice number (SI): (?i)\bSI[-\s]?(\d{1,6})\b → output "SI-<digits>"
+
+          Credit note number: (?i)\bCN[-\s]?(\d{1,6})\b → output "CN-<digits>"
+
+          UUID: (?i)\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b
+
+          SIMPLE ID PRECEDENCE (first ID wins)
+
+          Extract all IDs (INV/SI/CN) in the order they appear.
+
+          If the first matched ID starts with INV or SI → route INVOICE (supports
+          one OR many explicit invoice IDs).
+
+          If the first matched ID starts with CN → route CREDIT_NOTE.
+
+          (This precedence overrides wording like “credit note from INV-0879”.)
+
+          FLAGS (detect)
+
+          is_all: true if “all / overall / across companies / entire portfolio”.
+
+          is_allocations: true if “allocated / applied / used against / allocation”.
+
+          anaphora: true if referring to a previously discussed doc (“it / that invoice/credit
+          note/overpayment / that one / same one”).
+
+          collection_intent: true when the user asks for a set/list/summary WITHOUT
+          explicit invoice IDs (e.g., contains “invoices” plural OR verbs like “list/show/find/display/give
+          me” with invoices, or phrases like “outstanding invoices”, “overdue invoices”,
+          “aging”, “top debtors”, “who has most outstanding”, “by company”).
+
+          DECISION RULES (apply in order)
+
+          0) If any explicit ID (INV/SI/CN) is present, apply SIMPLE ID PRECEDENCE
+          and stop. Multiple explicit invoice IDs still route to INVOICE.
+
+          Else if explicit overpayment (word “overpayment” or UUID clearly referring
+          to an overpayment) → route OVERPAYMENT.
+
+          Else if collection_intent=true → route REPORT.
+
+          Else if clearly unrelated to Accounts Receivable (greetings/small talk/unclear)
+          → route GENERAL.
+
+          Else → REPORT (default).
+
+          PARAMETER OUTPUT (normalize and preserve order)
+
+          ids: list of normalized IDs in order of appearance (e.g., ["SI-00002709","INV-202101834","INV-202101931"]).
+
+          is_all: boolean.
+
+          is_allocations: boolean.
+
+          anaphora: boolean.
+
+          collection_intent: boolean.
+
+          EXAMPLES (classification only)
+
+          "Provide details of credit note from INV-0879" → INVOICE (ids=["INV-0879"])
+
+          "Provide invoice details from CN-0123" → CREDIT_NOTE (ids=["CN-0123"])
+
+          "Provide me list of all invoices which are outstanding" → REPORT (is_all=true,
+          collection_intent=true)
+
+          "Show outstanding invoices for 322 K RD" → REPORT (collection_intent=true,
+          company scope)
+
+          "What is the due date on INV-0892?" → INVOICE (ids=["INV-0892"])
+
+          "Where was CN-0885 applied?" → CREDIT_NOTE (ids=["CN-0885"], is_allocations=true)
+
+          "What’s the remaining credit on that overpayment?" (after discussing an
+          overpayment) → OVERPAYMENT (anaphora=true)
+
+          "Hi, can you help?" → GENERAL
+
+          "Thanks!" → GENERAL
+
+          "For Dataguard, among invoices SI-00002709, INV-202101834, and INV-202101931,
+          which are overdue and by how many days?" → INVOICE (ids=["SI-00002709","INV-202101834","INV-202101931"])'
+        instructions: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4
+          provider: langgenius/openai/openai
+        query_variable_selector:
+        - '1753314783757'
+        - sys.query
+        selected: false
+        title: Question Classifier
+        topics: []
+        type: question-classifier
+        vision:
+          enabled: false
+      height: 286
+      id: '1756956523411'
+      position:
+        x: 2338.7333580706127
+        y: 1218.119923192845
+      positionAbsolute:
+        x: 2338.7333580706127
+        y: 1218.119923192845
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: gpt-4.1-mini
+          provider: langgenius/openai/openai
+        prompt_template:
+        - id: 0de77573-71c8-4a32-a096-a62deeb50ee3
+          role: system
+          text: '<instruction> You will be given a user query that may or may not
+            contain one or more invoice ids. Your task is to carefully analyze the
+            user query and extract all invoice ids if present. The invoice id to look
+            for always starts with **"INV"** or **"SI"** (case-sensitive), and may
+            optionally include a hyphen (e.g., "INV-0012", "INV0012", "SI-000123",
+            "SI000123").
+
+            Follow these steps to complete the task:
+
+            Read the entire user query carefully.
+
+            Identify any substring that begins exactly with "INV" or "SI".
+
+            Extract the full invoice id string, which consists of:
+
+            The "INV" or "SI" prefix (case-sensitive).
+
+            An optional hyphen ("-").
+
+            A continuous sequence of digits immediately following.
+
+            Normalize the invoice id:
+
+            If there is no hyphen after "INV" or "SI", insert one before the digits.
+
+            For example:
+
+            "INV0012" → "INV-0012"
+
+            "SI000123" → "SI-000123"
+
+            Collect all valid invoice ids found in the order they appear.
+
+            Apply the following conditional check:
+
+            If at least one invoice id is found → output them as a comma-separated
+            string (no spaces).
+
+            Else → output "".
+
+            The output should only include the final string from step 6. Do not include
+            any XML tags or markup in the output.
+
+            Be case-sensitive; the invoice id must exactly start with uppercase "INV"
+            or "SI".
+
+            <examples> <example> User query: "Can you get me the details for INV-0832?"
+            Output: "INV-0832" </example> <example> User query: "I want to check invoice
+            INV0012 and INV-0836 together." Output: "INV-0012,INV-0836" </example>
+            <example> User query: "Please review SI000456 and SI-000789 along with
+            INV0033" Output: "SI-000456,SI-000789,INV-0033" </example> <example> User
+            query: "Show me the latest invoices please." Output: "" </example> </examples>
+            </instruction>'
+        - id: 447e145a-f279-436a-827e-ff3b009b3ac3
+          role: user
+          text: '{{#sys.query#}}'
+        selected: false
+        title: Identify Invoice Ids
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 90
+      id: '17574674894360'
+      position:
+        x: 2815.4421480733527
+        y: 1552.9094380743056
+      positionAbsolute:
+        x: 2815.4421480733527
+        y: 1552.9094380743056
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: empty
+            id: e3817949-a6a4-4b42-b61b-24a2e45c4f7d
+            value: '""'
+            varType: string
+            variable_selector:
+            - '17574674894360'
+            - text
+          - comparison_operator: contains
+            id: e3a9e299-cba2-489b-87a4-567888c95f1c
+            value: ','
+            varType: string
+            variable_selector:
+            - conversation
+            - last_company_id
+          - comparison_operator: empty
+            id: 473458f3-66ec-4a7d-a07e-db6c2712acb0
+            value: ''
+            varType: string
+            variable_selector:
+            - conversation
+            - last_company_id
+          id: 'true'
+          logical_operator: or
+        desc: ''
+        selected: false
+        title: Check request body data available
+        type: if-else
+      height: 178
+      id: '1757468709900'
+      position:
+        x: 3184.3809862495305
+        y: 1562.4906426036894
+      positionAbsolute:
+        x: 3184.3809862495305
+        y: 1562.4906426036894
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4
+          provider: langgenius/openai/openai
+        prompt_template:
+        - id: 01e64ae3-8322-40ee-aeca-03575d68f61c
+          role: system
+          text: "Given the extracted information (tenant_id, invoice numbers) and\
+            \ the user’s query, generate a natural, contextually appropriate response\
+            \ in plain language. The response should:\n\n- If tenant_id (company name)\
+            \ is missing but invoice numbers are present:\n  • Politely ask the user\
+            \ to provide the company name or tenant information needed to proceed.\n\
+            \n- If invoice numbers are missing but tenant_id is present:\n  • Politely\
+            \ ask the user to provide the invoice number(s) needed to proceed.\n\n\
+            - If both tenant_id and invoice numbers are missing:\n  • Politely ask\
+            \ the user to provide both the company name and the invoice number(s)\
+            \ in the same question.\n\nThe response should avoid technical jargon,\
+            \ be user-friendly, and directly tied to what is missing or provided.\
+            \ Do not fabricate values or assume defaults.  \nDo not include phrases\
+            \ like \"thank you\" in the response."
+        - id: 971b04ad-5d1c-4323-a45d-632f3770f166
+          role: user
+          text: "Invoice Number:\n{{#17574674894360.text#}}\n\ntenant_id:\n{{#conversation.last_company_id#}}\n\
+            \ \nHere's user question:\n{{#sys.query#}}"
+        selected: false
+        title: LLM - Request body data missing
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 90
+      id: '1757469951739'
+      position:
+        x: 3567.2263531539406
+        y: 1557.2364745927352
+      positionAbsolute:
+        x: 3567.2263531539406
+        y: 1557.2364745927352
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: '{{#1757469951739.text#}}'
+        desc: ''
+        selected: false
+        title: Answer - Request body data missing
+        type: answer
+        variables: []
+      height: 105
+      id: '1757470223296'
+      position:
+        x: 3983.964803470167
+        y: 1552.9094380743056
+      positionAbsolute:
+        x: 3983.964803470167
+        y: 1552.9094380743056
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data: []
+          type: none
+        desc: ''
+        headers: x-api-key:mQTobC69fto8pHDD4JeCMttgBYElBfnCL9AG6u4FsPsnEogmQ8jNGVPAMD4156wGIMhNNQJ9Xqd5y2nBzpvf3JKfwZOccpEcE8d834XPULdRW5e8O4p4klQInK0kyCVa
+        method: get
+        params: ''
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 100
+        selected: false
+        ssl_verify: true
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTP - Invoice
+        type: http-request
+        url: https://finance-assistant-api.fly.dev/api/v1/invoice/{{#conversation.last_company_id#}}/{{#17574674894360.text#}}
+        variables: []
+      height: 179
+      id: '1757470603566'
+      position:
+        x: 3567.2263531539406
+        y: 1668.67390046921
+      positionAbsolute:
+        x: 3567.2263531539406
+        y: 1668.67390046921
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4
+          provider: langgenius/openai/openai
+        prompt_template:
+        - id: 673eabee-d725-40ed-94f4-298551ce25f8
+          role: system
+          text: 'You will be given two inputs:
+
+            The user’s query.
+
+            An API response containing one or more invoice records in JSON format.
+
+            Your job is to produce a concise, human-readable answer in plain English
+            only based strictly on the API response. Do not invent or assume data
+            that is not present.
+
+            Rules for writing the answer:
+
+            If one or more invoices have "success": true, summarize the key details
+            the user would expect:
+
+            invoice number, contact name (if present), issue date, due date, status,
+            amount due, amount paid;
+
+            line items (description, quantity, unit amount, line amount);
+
+            any payments (amount and date).
+
+            Write this as natural language. Use complete sentences or short bullet
+            points. Be professional and concise.
+
+            If any invoice has "success": false, clearly state the invoice number
+            could not be found.
+
+            If multiple invoices are included, present each invoice separately so
+            the reader can tell which details belong to which invoice.
+
+            Do not output code, keys, field names, or raw JSON.
+
+            Never output curly braces, square brackets, or any JSON-like structures.
+
+            Imagine you are writing an email to a colleague—only prose or bullet points.
+
+            Examples (style only; do not copy these verbatim):
+
+            Invoice INV-0832 for John Doe was issued on February 2, 2022. It is paid
+            in full ($200.00). Line items include 2 × Product A at $100 each.
+
+            I wasn’t able to find an invoice with the number INV-44444.
+
+            Invoice INV-0836 for Jane Doe was issued on February 5, 2022. Status:
+            UNPAID, $300.00 outstanding. Line items include 3 × Product B at $100
+            each.
+
+            If you are about to produce JSON or any braces/arrays, stop and rephrase
+            as plain English.'
+        - id: 40a29ba3-ef6b-48f1-8b49-adacd364cb10
+          role: user
+          text: 'User question:
+
+            {{#sys.query#}}
+
+
+            API Response:
+
+            {{#1757470603566.body#}}'
+        selected: false
+        title: LLM - Invoice answer format
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 90
+      id: '1757470692293'
+      position:
+        x: 3983.964803470167
+        y: 1668.67390046921
+      positionAbsolute:
+        x: 3983.964803470167
+        y: 1668.67390046921
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: '{{#1757470692293.text#}}'
+        desc: ''
+        selected: false
+        title: 'Answer: Invoice'
+        type: answer
+        variables: []
+      height: 105
+      id: '1757471151667'
+      position:
+        x: 3987.7001460377182
+        y: 1769.6105861155204
+      positionAbsolute:
+        x: 3987.7001460377182
+        y: 1769.6105861155204
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        items:
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1755049922069'
+          - result
+          variable_selector:
+          - conversation
+          - last_company_id
+          write_mode: over-write
+        selected: false
+        title: 'Variable Assigner: Company Id'
+        type: assigner
+        version: '2'
+      height: 86
+      id: '1757472636246'
+      position:
+        x: 1769.8465984284758
+        y: 894.0146398107679
+      positionAbsolute:
+        x: 1769.8465984284758
+        y: 894.0146398107679
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: gpt-4.1-mini
+          provider: langgenius/openai/openai
+        prompt_template:
+        - id: 0de77573-71c8-4a32-a096-a62deeb50ee3
+          role: system
+          text: "<instruction>\nYou will be given a user query that may or may not\
+            \ contain one or more credit note ids. Your task is to carefully analyze\
+            \ the user query and extract all credit note ids if present. The credit\
+            \ note id to look for always starts with \"CN\" (case-sensitive), and\
+            \ may optionally include a hyphen (e.g., \"CN-0012\" or \"CN0012\").\n\
+            \n\nFollow these steps to complete the task:\n\n\n1. Read the entire user\
+            \ query carefully.\n2. Identify any substring that begins exactly with\
+            \ \"CN\".\n3. Extract the full credit note id string, which consists of:\n\
+            \   - The \"CN\" prefix (case-sensitive).\n   - An optional hyphen (\"\
+            -\").\n   - A continuous sequence of digits immediately following.\n4.\
+            \ Normalize the credit note id:\n   - If there is no hyphen after \"CN\"\
+            , insert one before the digits.  \n     For example, \"CN0012\" should\
+            \ be normalized to \"CN-0012\".\n5. Collect all valid credit note ids\
+            \ found in the order they appear.\n6. Apply the following conditional\
+            \ check:\n   - If at least one credit note id is found → output them as\
+            \ a comma-separated string (no spaces).\n   - Else → output \"\".\n7.\
+            \ The output should only include the final string from step 6. Do not\
+            \ include any XML tags or markup in the output.\n8. Be case-sensitive;\
+            \ the credit note id must exactly start with uppercase \"CN\".\n\n\n<examples>\n\
+            <example>\nUser query: \"Can you get me the details for CN-0832?\"\nOutput:\
+            \ \"CN-0832\"\n</example>\n\n\n<example>\nUser query: \"I want to check\
+            \ credit note CN0012 and CN-0836 together.\"\nOutput: \"CN-0012,CN-0836\"\
+            \n</example>\n\n\n<example>\nUser query: \"Show me the latest credit notes\
+            \ please.\"\nOutput: \"\"\n</example>\n</examples>\n</instruction>"
+        - id: 447e145a-f279-436a-827e-ff3b009b3ac3
+          role: user
+          text: '{{#sys.query#}}'
+        selected: false
+        title: Identify Credit Note Ids
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 90
+      id: '17574761095630'
+      position:
+        x: 2815.4421480733527
+        y: 1920.2931553875264
+      positionAbsolute:
+        x: 2815.4421480733527
+        y: 1920.2931553875264
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: empty
+            id: e3817949-a6a4-4b42-b61b-24a2e45c4f7d
+            value: ''
+            varType: string
+            variable_selector:
+            - '17574761095630'
+            - text
+          - comparison_operator: contains
+            id: e3a9e299-cba2-489b-87a4-567888c95f1c
+            value: ','
+            varType: string
+            variable_selector:
+            - conversation
+            - last_company_id
+          - comparison_operator: empty
+            id: 473458f3-66ec-4a7d-a07e-db6c2712acb0
+            value: ''
+            varType: string
+            variable_selector:
+            - conversation
+            - last_company_id
+          id: 'true'
+          logical_operator: or
+        desc: ''
+        selected: false
+        title: Check request body data available (CN)
+        type: if-else
+      height: 178
+      id: '17574761951650'
+      position:
+        x: 3184.3809862495305
+        y: 1920.2931553875264
+      positionAbsolute:
+        x: 3184.3809862495305
+        y: 1920.2931553875264
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4
+          provider: langgenius/openai/openai
+        prompt_template:
+        - id: 01e64ae3-8322-40ee-aeca-03575d68f61c
+          role: system
+          text: "Given the extracted information (tenant_id, credit note numbers)\
+            \ and the user’s query, generate a natural, contextually appropriate response\
+            \ in plain language. The response should:\n\n\n- If tenant_id (company\
+            \ name) is missing but credit note numbers are present:\n  • Politely\
+            \ ask the user to provide the company name or tenant information needed\
+            \ to proceed.\n\n\n- If credit note numbers are missing but tenant_id\
+            \ is present:\n  • Politely ask the user to provide the invoice number(s)\
+            \ needed to proceed.\n\n\n- If both tenant_id and credit note numbers\
+            \ are missing:\n  • Politely ask the user to provide both the company\
+            \ name and the invoice number(s) in the same question.\n\n\nThe response\
+            \ should avoid technical jargon, be user-friendly, and directly tied to\
+            \ what is missing or provided. Do not fabricate values or assume defaults.\
+            \  \nDo not include phrases like \"thank you\" in the response."
+        - id: 971b04ad-5d1c-4323-a45d-632f3770f166
+          role: user
+          text: "Invoice Number:\n{{#17574761095630.text#}}\n\ntenant_id:\n{{#conversation.last_company_id#}}\n\
+            \ \nHere's user question:\n{{#sys.query#}}"
+        selected: false
+        title: LLM - Request body data missing (CN)
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 90
+      id: '17574762415150'
+      position:
+        x: 3577.3227716969427
+        y: 1920.2931553875264
+      positionAbsolute:
+        x: 3577.3227716969427
+        y: 1920.2931553875264
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: '{{#17574762415150.text#}}'
+        desc: ''
+        selected: false
+        title: Answer - Request body data missing (CN)
+        type: answer
+        variables: []
+      height: 105
+      id: '17574762834100'
+      position:
+        x: 3983.964803470167
+        y: 1920.2931553875264
+      positionAbsolute:
+        x: 3983.964803470167
+        y: 1920.2931553875264
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data: []
+          type: none
+        desc: ''
+        headers: x-api-key:api_key
+        method: get
+        params: ''
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 100
+        selected: false
+        ssl_verify: true
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTP - Credit Note
+        type: http-request
+        url: https://finance-assistant-api.fly.dev/api/v1/credit-note/{{#conversation.last_company_id#}}/{{#17574761095630.text#}}
+        variables: []
+      height: 179
+      id: '17574763221700'
+      position:
+        x: 3587.113249686066
+        y: 2046.2710845346887
+      positionAbsolute:
+        x: 3587.113249686066
+        y: 2046.2710845346887
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4
+          provider: langgenius/openai/openai
+        prompt_template:
+        - id: 673eabee-d725-40ed-94f4-298551ce25f8
+          role: system
+          text: 'You will be given two inputs:
+
+            The user’s query.
+
+            An API response containing one or more credit note records in JSON format.
+
+            Your job is to produce a concise, human-readable answer in plain English
+            only based strictly on the API response. Do not invent or assume data
+            that is not present.
+
+            Rules for writing the answer:
+
+            If one or more credit notes have "success": true, summarize the key details
+            the user would expect:
+
+            credit note number, contact name (if present), issue date, due date, status,
+            amount due, amount paid;
+
+            line items (description, quantity, unit amount, line amount);
+
+            any payments (amount and date).
+
+            Write this as natural language. Use complete sentences or short bullet
+            points. Be professional and concise.
+
+            If any credit note has "success": false, clearly state the credit note
+            number could not be found.
+
+            If multiple credit notes are included, present each credit note separately
+            so the reader can tell which details belong to which credit note.
+
+            Do not output code, keys, field names, or raw JSON.
+
+            Never output curly braces, square brackets, or any JSON-like structures.
+
+            Imagine you’re writing an email to a colleague—only prose or bullet points.
+
+            Examples (style only; do not copy these verbatim):
+
+            Invoice CN-0832 for John Doe was issued on February 2, 2022. It is paid
+            in full ($200.00). Line items include 2 × Product A at $100 each.
+
+            I wasn’t able to find an credit note with the number CN-44444.
+
+            Invoice CN-0836 for Jane Doe was issued on February 5, 2022. Status: UNPAID,
+            $300.00 outstanding. Line items include 3 × Product B at $100 each.
+
+            If you are about to produce JSON or any braces/arrays, stop and rephrase
+            as plain English.'
+        - id: 40a29ba3-ef6b-48f1-8b49-adacd364cb10
+          role: user
+          text: 'User question:
+
+            {{#sys.query#}}
+
+
+            API Response:
+
+            {{#1757470603566.body#}}'
+        selected: false
+        title: LLM - CN answer format
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 90
+      id: '17574763683530'
+      position:
+        x: 3987.7001460377182
+        y: 2046.2710845346887
+      positionAbsolute:
+        x: 3987.7001460377182
+        y: 2046.2710845346887
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: '{{#17574763683530.text#}}'
+        desc: ''
+        selected: false
+        title: 'Answer: CN'
+        type: answer
+        variables: []
+      height: 105
+      id: '17574764246360'
+      position:
+        x: 3987.7001460377182
+        y: 2149.59543713249
+      positionAbsolute:
+        x: 3987.7001460377182
+        y: 2149.59543713249
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: gpt-4.1-mini
+          provider: langgenius/openai/openai
+        prompt_template:
+        - id: 0de77573-71c8-4a32-a096-a62deeb50ee3
+          role: system
+          text: "<instruction>\nYou will be given a user query that may or may not\
+            \ contain one or more credit note ids. Your task is to carefully analyze\
+            \ the user query and extract all credit note ids if present. The credit\
+            \ note id to look for always starts with \"CN\" (case-sensitive), and\
+            \ may optionally include a hyphen (e.g., \"CN-0012\" or \"CN0012\").\n\
+            \n\nFollow these steps to complete the task:\n\n\n1. Read the entire user\
+            \ query carefully.\n2. Identify any substring that begins exactly with\
+            \ \"CN\".\n3. Extract the full credit note id string, which consists of:\n\
+            \   - The \"CN\" prefix (case-sensitive).\n   - An optional hyphen (\"\
+            -\").\n   - A continuous sequence of digits immediately following.\n4.\
+            \ Normalize the credit note id:\n   - If there is no hyphen after \"CN\"\
+            , insert one before the digits.  \n     For example, \"CN0012\" should\
+            \ be normalized to \"CN-0012\".\n5. Collect all valid credit note ids\
+            \ found in the order they appear.\n6. Apply the following conditional\
+            \ check:\n   - If at least one credit note id is found → output them as\
+            \ a comma-separated string (no spaces).\n   - Else → output \"\".\n7.\
+            \ The output should only include the final string from step 6. Do not\
+            \ include any XML tags or markup in the output.\n8. Be case-sensitive;\
+            \ the credit note id must exactly start with uppercase \"CN\".\n\n\n<examples>\n\
+            <example>\nUser query: \"Can you get me the details for CN-0832?\"\nOutput:\
+            \ \"CN-0832\"\n</example>\n\n\n<example>\nUser query: \"I want to check\
+            \ credit note CN0012 and CN-0836 together.\"\nOutput: \"CN-0012,CN-0836\"\
+            \n</example>\n\n\n<example>\nUser query: \"Show me the latest credit notes\
+            \ please.\"\nOutput: \"\"\n</example>\n</examples>\n</instruction>"
+        - id: 447e145a-f279-436a-827e-ff3b009b3ac3
+          role: user
+          text: '{{#sys.query#}}'
+        selected: false
+        title: Identify Overpayment
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 90
+      id: '17574768197240'
+      position:
+        x: 2815.4421480733527
+        y: 2301.203849581358
+      positionAbsolute:
+        x: 2815.4421480733527
+        y: 2301.203849581358
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: empty
+            id: e3817949-a6a4-4b42-b61b-24a2e45c4f7d
+            value: ''
+            varType: string
+            variable_selector:
+            - '17574768197240'
+            - text
+          - comparison_operator: contains
+            id: e3a9e299-cba2-489b-87a4-567888c95f1c
+            value: ','
+            varType: string
+            variable_selector:
+            - conversation
+            - last_company_id
+          - comparison_operator: empty
+            id: 473458f3-66ec-4a7d-a07e-db6c2712acb0
+            value: ''
+            varType: string
+            variable_selector:
+            - conversation
+            - last_company_id
+          id: 'true'
+          logical_operator: or
+        desc: ''
+        selected: false
+        title: Check request body data available (Overpayment)
+        type: if-else
+      height: 178
+      id: '17574768493090'
+      position:
+        x: 3184.3809862495305
+        y: 2301.203849581358
+      positionAbsolute:
+        x: 3184.3809862495305
+        y: 2301.203849581358
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4
+          provider: langgenius/openai/openai
+        prompt_template:
+        - id: 01e64ae3-8322-40ee-aeca-03575d68f61c
+          role: system
+          text: "Given the extracted information (tenant_id, credit note numbers)\
+            \ and the user’s query, generate a natural, contextually appropriate response\
+            \ in plain language. The response should:\n\n\n- If tenant_id (company\
+            \ name) is missing but credit note numbers are present:\n  • Politely\
+            \ ask the user to provide the company name or tenant information needed\
+            \ to proceed.\n\n\n- If credit note numbers are missing but tenant_id\
+            \ is present:\n  • Politely ask the user to provide the invoice number(s)\
+            \ needed to proceed.\n\n\n- If both tenant_id and credit note numbers\
+            \ are missing:\n  • Politely ask the user to provide both the company\
+            \ name and the invoice number(s) in the same question.\n\n\nThe response\
+            \ should avoid technical jargon, be user-friendly, and directly tied to\
+            \ what is missing or provided. Do not fabricate values or assume defaults.\
+            \  \nDo not include phrases like \"thank you\" in the response."
+        - id: 971b04ad-5d1c-4323-a45d-632f3770f166
+          role: user
+          text: "Invoice Number:\n{{#17574768197240.text#}}\n\ntenant_id:\n{{#conversation.last_company_id#}}\n\
+            \ \nHere's user question:\n{{#sys.query#}}"
+        selected: false
+        title: LLM - Request body data missing (Overpayment)
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 90
+      id: '17574768964600'
+      position:
+        x: 3587.113249686066
+        y: 2301.203849581358
+      positionAbsolute:
+        x: 3587.113249686066
+        y: 2301.203849581358
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: '{{#17574768964600.text#}}'
+        desc: ''
+        selected: false
+        title: Answer - Request body data missing (Overpayment)
+        type: answer
+        variables: []
+      height: 105
+      id: '17574769234930'
+      position:
+        x: 3998.650520453852
+        y: 2301.203849581358
+      positionAbsolute:
+        x: 3998.650520453852
+        y: 2301.203849581358
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data: []
+          type: none
+        desc: ''
+        headers: x-api-key:api_key
+        method: get
+        params: ''
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 100
+        selected: false
+        ssl_verify: true
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTP - Overpayment
+        type: http-request
+        url: https://finance-assistant-api.fly.dev/api/v1/overpayment/{{#conversation.last_company_id#}}/{{#17574768197240.text#}}
+        variables: []
+      height: 179
+      id: '17574770209610'
+      position:
+        x: 3587.113249686066
+        y: 2430.8522996725524
+      positionAbsolute:
+        x: 3587.113249686066
+        y: 2430.8522996725524
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4
+          provider: langgenius/openai/openai
+        prompt_template:
+        - id: 673eabee-d725-40ed-94f4-298551ce25f8
+          role: system
+          text: 'You will be given two inputs:
+
+            The user’s query.
+
+            An API response containing one or more credit note records in JSON format.
+
+            Your job is to produce a concise, human-readable answer in plain English
+            only based strictly on the API response. Do not invent or assume data
+            that is not present.
+
+            Rules for writing the answer:
+
+            If one or more credit notes have "success": true, summarize the key details
+            the user would expect:
+
+            credit note number, contact name (if present), issue date, due date, status,
+            amount due, amount paid;
+
+            line items (description, quantity, unit amount, line amount);
+
+            any payments (amount and date).
+
+            Write this as natural language. Use complete sentences or short bullet
+            points. Be professional and concise.
+
+            If any credit note has "success": false, clearly state the credit note
+            number could not be found.
+
+            If multiple credit notes are included, present each credit note separately
+            so the reader can tell which details belong to which credit note.
+
+            Do not output code, keys, field names, or raw JSON.
+
+            Never output curly braces, square brackets, or any JSON-like structures.
+
+            Imagine you’re writing an email to a colleague—only prose or bullet points.
+
+            Examples (style only; do not copy these verbatim):
+
+            Invoice CN-0832 for John Doe was issued on February 2, 2022. It is paid
+            in full ($200.00). Line items include 2 × Product A at $100 each.
+
+            I wasn’t able to find an credit note with the number CN-44444.
+
+            Invoice CN-0836 for Jane Doe was issued on February 5, 2022. Status: UNPAID,
+            $300.00 outstanding. Line items include 3 × Product B at $100 each.
+
+            If you are about to produce JSON or any braces/arrays, stop and rephrase
+            as plain English.'
+        - id: 40a29ba3-ef6b-48f1-8b49-adacd364cb10
+          role: user
+          text: 'User question:
+
+            {{#sys.query#}}
+
+
+            API Response:
+
+            {{#1757470603566.body#}}'
+        selected: false
+        title: LLM - Overpayment answer format
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 90
+      id: '17574770984230'
+      position:
+        x: 3998.650520453852
+        y: 2430.8522996725524
+      positionAbsolute:
+        x: 3998.650520453852
+        y: 2430.8522996725524
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: '{{#17574763683530.text#}}'
+        desc: ''
+        selected: false
+        title: 'Answer: Overpayment'
+        type: answer
+        variables: []
+      height: 106
+      id: '17574771196420'
+      position:
+        x: 3998.650520453852
+        y: 2547.8836304211386
+      positionAbsolute:
+        x: 3998.650520453852
+        y: 2547.8836304211386
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4
+          provider: langgenius/openai/openai
+        prompt_template:
+        - id: 01e64ae3-8322-40ee-aeca-03575d68f61c
+          role: system
+          text: "You are an assistant that ONLY handles Accounts Receivable (AR) and\
+            \ Aged Receivables questions.\n\nYour job:\n- Respond ONLY to AR/Aged\
+            \ Receivables topics such as invoices, credit notes, overpayments, AR/aging\
+            \ reports, outstanding/overdue amounts, allocations, and related status/details.\n\
+            - If the user’s message is out of scope (not AR), do NOT answer it. Instead,\
+            \ politely redirect them to ask an AR/Aged Receivables question with 2–4\
+            \ concrete examples.\n- Keep replies short, clear, and in plain English.\
+            \ Do not output code or JSON. Do not include “thank you”.\n\nOn-topic\
+            \ examples (answer these):\n- “What’s the outstanding amount for INV-0123?”\n\
+            - “Show the line items on INV-0456.”\n- “Where was CN-0005 applied?”\n\
+            - “How much is overdue this month across all companies?”\n- “Who has the\
+            \ highest outstanding balance?”\n- “List all invoices overdue >30 days\
+            \ for ACME Ltd.”\n- “Show remaining credit on overpayment e40cdba8-5961-4f14-b61b-f6b20f1349ba.”\n\
+            \nOff-topic handling (DO NOT answer; redirect):\n- If message is not AR-related\
+            \ (e.g., payroll, taxes, random chat, general finance, HR, IT):\n  - Reply\
+            \ briefly: clarify you handle AR/Aged Receivables only and ask them to\
+            \ rephrase as an AR question.\n  - Offer a few AR examples relevant to\
+            \ typical needs (e.g., outstanding totals, overdue lists, invoice details).\n\
+            \nMissing-info guidance (when the user is on-topic but details are insufficient):\n\
+            - If asking about a specific invoice but no invoice number is provided:\
+            \ ask for the invoice number(s) (e.g., “INV-0123”).\n- If asking about\
+            \ a specific credit note but no CN number: ask for the credit note number(s)\
+            \ (e.g., “CN-0005”).\n- If asking about an overpayment but no ID: ask\
+            \ for the overpayment UUID.\n- For report-style requests (totals/lists/aging/top\
+            \ debtors), ask for scope (specific company vs. all companies), date range,\
+            \ and any filters (open vs overdue, aging buckets).\n\nStyle rules:\n\
+            - Plain sentences or short bullet points.\n- No JSON, no keys/fields,\
+            \ no code blocks.\n- Be direct and concise; avoid filler language and\
+            \ avoid “thank you”.\n\nRedirect templates (use one line plus 2–4 examples):\n\
+            - “I can help with Accounts Receivable only. Please ask an AR/Aged Receivables\
+            \ question, such as:\n  • What’s the outstanding amount for INV-0879 from\
+            \ 322 K Road?\n  • What’s the outstanding amount for 322 K Road?\n  •\
+            \ List overdue invoices for 322 K RD\n  • Who has the most outstanding\
+            \ this month?\n  • ‘Show where CN-0005 was applied.’”"
+        - id: 971b04ad-5d1c-4323-a45d-632f3770f166
+          role: user
+          text: "tenant_id:\n{{#conversation.last_company_id#}}\n\nCompany Name:\n\
+            {{#conversation.last_companies#}}\n \nHere's user question:\n{{#sys.query#}}"
+        selected: false
+        title: LLM - Request body data missing (1)
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 90
+      id: '17574771518970'
+      position:
+        x: 2820.7658020237786
+        y: 2701.4911151144383
+      positionAbsolute:
+        x: 2820.7658020237786
+        y: 2701.4911151144383
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: '{{#17574771518970.text#}}'
+        desc: ''
+        selected: false
+        title: 'Answer: General'
+        type: answer
+        variables: []
+      height: 105
+      id: '1757477328447'
+      position:
+        x: 3184.3809862495305
+        y: 2701.4911151144383
+      positionAbsolute:
+        x: 3184.3809862495305
+        y: 2701.4911151144383
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    viewport:
+      x: -1497.825105042631
+      y: -332.84348394078506
+      zoom: 0.59327873037563
